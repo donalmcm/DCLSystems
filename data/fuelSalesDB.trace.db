@@ -1,15 +1,3 @@
-2017-03-22 22:02:25 jdbc[3]: exception
-org.h2.jdbc.JdbcSQLException: Table "FUELSALESDB" not found; SQL statement:
-SELECT * FROM FUELSALESDB [42102-192]
-2017-03-31 15:24:42 jdbc[3]: exception
-org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT * FROM *[*]"; expected "identifier"; SQL statement:
-SELECT * FROM * [42001-192]
-2017-03-31 15:25:04 jdbc[3]: exception
-org.h2.jdbc.JdbcSQLException: Table "FUELSALESDB" not found; SQL statement:
-SELECT * FROM FUELSALESDB [42102-192]
-2017-03-31 15:57:42 jdbc[3]: exception
-org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "DROP DIESEL[*] "; expected "TABLE, INDEX, USER, SEQUENCE, CONSTANT, TRIGGER, VIEW, ROLE, ALIAS, SCHEMA, ALL, DOMAIN, TYPE, DATATYPE, AGGREGATE"; SQL statement:
-drop diesel [42001-192]
-2017-03-31 15:57:46 jdbc[3]: exception
-org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "DROP DIESEL[*] "; expected "TABLE, INDEX, USER, SEQUENCE, CONSTANT, TRIGGER, VIEW, ROLE, ALIAS, SCHEMA, ALL, DOMAIN, TYPE, DATATYPE, AGGREGATE"; SQL statement:
-drop diesel [42001-192]
+2017-03-30 17:06:53 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Table "PLAY_EVOLUTIONS" not found; SQL statement:
+select id, hash, apply_script, revert_script, state, last_problem from play_evolutions where state like 'applying_%' [42102-192]
