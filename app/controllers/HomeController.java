@@ -1,8 +1,19 @@
 package controllers;
 
+import play.api.Environment;
 import play.mvc.*;
+import play.data.*;
+import play.db.ebean.Transactional;
+
+
+import java.util.ArrayList;
+import java.util.List;
+import javax.inject.Inject;
 
 import views.html.*;
+
+// import models
+import models.*;
 
 /**
  * This controller contains an action to handle HTTP requests

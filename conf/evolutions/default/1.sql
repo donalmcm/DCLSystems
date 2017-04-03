@@ -19,9 +19,22 @@ create table fuel_sales (
 );
 create sequence fuel_sales_seq;
 
+create table tank (
+  id                            integer not null,
+  name                          varchar(255),
+  capacity                      integer,
+  dip                           integer,
+  ullage                        integer,
+  constraint pk_tank primary key (id)
+);
+create sequence tank_seq;
+
 
 # --- !Downs
 
 drop table if exists fuel_sales;
 drop sequence if exists fuel_sales_seq;
+
+drop table if exists tank;
+drop sequence if exists tank_seq;
 
