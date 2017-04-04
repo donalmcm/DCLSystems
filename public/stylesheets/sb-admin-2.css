@@ -14,6 +14,9 @@ body {
   min-height: 568px;
   background-color: white;
 }
+#tank-details{
+ float: right;
+}
 
 #tank-container {
   width: 120px;
