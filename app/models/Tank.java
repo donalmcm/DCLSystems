@@ -45,15 +45,6 @@ public class Tank extends Model
         this.dip = dip;
         this.ullage = ullage;
     }
-    // Generic query helper for entity Computer with id int
-    public static Finder<int,Tank> find = new Finder<int,Tank>(Tank.class);
-    
-    // Find all Products in the database
-    // Filter tank name
-    public static List<Tank> findAll()
-    {
-        return Tank.find.all();
-    }
 
     public int getId() 
     {
