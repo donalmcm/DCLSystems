@@ -8,7 +8,6 @@ import play.data.format.*;
 import play.data.validation.*;
 
 @Entity
-
 public class User extends Model {
 
 @Id
