@@ -17,6 +17,7 @@ GET 	/rewardMembers			controllers.HomeController.rewardMembers
 
 GET 	/login			controllers.LoginController.login
 POST     /loginSubmit           controllers.LoginController.loginSubmit
+GET      /logout                 controllers.LoginController.logout
 		
 
 # An example controller showing how to use dependency injection

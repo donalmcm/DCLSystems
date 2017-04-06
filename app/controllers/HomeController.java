@@ -11,8 +11,8 @@ import java.util.List;
 import javax.inject.Inject;
 
 import views.html.*;
-
 // import models
+import models.users.User;
 import models.*;
 
 /**
@@ -28,63 +28,63 @@ public class HomeController extends Controller {
      * <code>GET</code> request with a path of <code>/</code>.
      */
 
+        private User getUserFromSession() {
+
+	  return User.getUserById(session().get("email"));
+
+         }
+
 
 	public Result index()
 	{
-		return ok(index.render());
+		return ok(index.render(getUserFromSession()));
 	}
 
         public Result fuelLevels()
 	{
-		return ok(fuelLevels.render());
+		return ok(fuelLevels.render(getUserFromSession()));
 	}
 
 	public Result orderFuel()
 	{
-		return ok(orderFuel.render());
+		return ok(orderFuel.render(getUserFromSession()));
 	}
 	
 	public Result setFuelPrices()
 	{
-		return ok(setFuelPrices.render());
+		return ok(setFuelPrices.render(getUserFromSession()));
 	}
 
 	public Result reports()
 	{
-		return ok(reports.render());
+		return ok(reports.render(getUserFromSession()));
 	}
 
 	public Result barChart()
 	{
-		return ok(barChart.render());
+		return ok(barChart.render(getUserFromSession()));
 	}
 
 	public Result pieChart()
 	{
-		return ok(pieChart.render());
+		return ok(pieChart.render(getUserFromSession()));
 	}
 
 	public Result lineChart()
 	{
-		return ok(lineChart.render());
+		return ok(lineChart.render(getUserFromSession()));
 	}
 
 	public Result roster()
 	{
-		return ok(roster.render());
+		return ok(roster.render(getUserFromSession()));
 	}
 	public Result rewardMembers()
 	{
-		return ok(rewardMembers.render());
+		return ok(rewardMembers.render(getUserFromSession()));
 	}
 
-
-
 }
-
-
-
-
 
 
 

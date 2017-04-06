@@ -29,7 +29,7 @@ public class LoginController extends Controller{
 
    Form<Login> loginForm = formFactory.form(Login.class);
 
-   return ok(login.render(loginForm));
+   return ok(login.render(loginForm, User.getUserById(session().get("email"))));
    }
 
    
@@ -38,13 +38,19 @@ public class LoginController extends Controller{
       Form<Login> loginForm = formFactory.form(Login.class).bindFromRequest();
 
       if(loginForm.hasErrors()) {
-         return badRequest(login.render(loginForm));
+         return badRequest(login.render(loginForm, User.getUserById(session().get("email"))));
       }
       else{
          session().clear();
          session("email", loginForm.get().getEmail());
       }
       return redirect(controllers.routes.HomeController.index());
+    }
+
+    public Result logout() {
+       session().clear();
+       flash("success", "you've been logged out");
+       return redirect(routes.LoginController.login());
     }
 
 }
