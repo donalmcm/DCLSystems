@@ -3,6 +3,14 @@
 
 # --- !Ups
 
+create table fuel_price (
+  id                            bigint not null,
+  name                          varchar(255),
+  price                         double,
+  constraint pk_fuel_price primary key (id)
+);
+create sequence fuel_price_seq;
+
 create table fuel_sales (
   id                            integer not null,
   fuel_type                     varchar(255),
@@ -39,6 +47,9 @@ create table user (
 
 
 # --- !Downs
+
+drop table if exists fuel_price;
+drop sequence if exists fuel_price_seq;
 
 drop table if exists fuel_sales;
 drop sequence if exists fuel_sales_seq;
