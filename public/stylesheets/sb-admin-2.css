@@ -15,7 +15,8 @@ body {
   background-color: white;
 }
 #tank-details{
- float: right;
+
+ 
 }
 
 #tank-container {
@@ -25,6 +26,7 @@ body {
   background-color: clear;
   border-radius: 120px;
   border: 1px solid black;
+  float : left;
 }
 
 #tank-content {
