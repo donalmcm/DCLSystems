@@ -27,6 +27,16 @@ create table fuel_sales (
 );
 create sequence fuel_sales_seq;
 
+create table reward_members (
+  id                            bigint not null,
+  name                          varchar(255),
+  address                       integer,
+  contact_number                integer,
+  points                        integer,
+  constraint pk_reward_members primary key (id)
+);
+create sequence reward_members_seq;
+
 create table tank (
   id                            integer not null,
   name                          varchar(255),
@@ -53,6 +63,9 @@ drop sequence if exists fuel_price_seq;
 
 drop table if exists fuel_sales;
 drop sequence if exists fuel_sales_seq;
+
+drop table if exists reward_members;
+drop sequence if exists reward_members_seq;
 
 drop table if exists tank;
 drop sequence if exists tank_seq;

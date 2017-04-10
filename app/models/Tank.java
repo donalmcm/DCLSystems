@@ -95,6 +95,13 @@ public class Tank extends Model
     {
         this.ullage = ullage;
     }
+
+    public int getPercentage()
+    {
+        int percentage = (getDip()/getCapacity())*100;
+        return  percentage;
+    }
+
     
     
 

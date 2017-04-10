@@ -81,7 +81,10 @@ public class HomeController extends Controller {
 	}
 	public Result rewardMembers()
 	{
+		List<RewardMembers> rewardMembersList = RewardMembers.findAll();
+
 		return ok(rewardMembers.render(getUserFromSession()));
+		//return ok(rewardMembers.render(rewardMembersList));
 	}
 
 }
