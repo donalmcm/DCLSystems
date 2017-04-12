@@ -5,7 +5,6 @@ import play.mvc.*;
 import play.data.*;
 import play.db.ebean.Transactional;
 
-
 import java.util.ArrayList;
 import java.util.List;
 import javax.inject.Inject;
@@ -79,13 +78,13 @@ public class HomeController extends Controller {
 	{
 		return ok(roster.render(getUserFromSession()));
 	}
-	public Result rewardMembers()
-	{
-		List<RewardMembers> rewardMembersList = RewardMembers.findAll();
 
-		return ok(rewardMembers.render(getUserFromSession()));
-		//return ok(rewardMembers.render(rewardMembersList));
-	}
+	public Result rewardMembers() {
+		// Get the list of members
+		List<RewardMember> rewardMemberList = RewardMember.findAll();
+
+		// render the list members view, passing parameters
+		return ok(rewardMembers.render(rewardMemberList, getUserFromSession()));}
 
 }
 

@@ -1,5 +1,4 @@
-@(user: models.users.User)
-    @* @(RewardMembers: List[models.RewardMembers]) *@
+ @(rewardMembers: List[models.RewardMember], user: models.users.User)
 
     @main("rewardMembers",user){
 
@@ -30,15 +29,22 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                 @*   @for(r <- rewardMembers.this)
-                                    {
+                                    <tr>
+                                        <td>42</td>
+                                        <td>Donal</td>
+                                        <td>Tallght</td>
+                                        <td>1234</td>
+                                        <td>9999</td>
+                                    </tr>
+                                    @for(r <- rewardMembers){
                                         <tr>
                                             <td>@r.getId</td>
                                             <td>@r.getName</td>
+                                            <td>@r.getAddress</td>
                                             <td>@r.getContactNumber</td>
                                             <td>@r.getPoints</td>
                                         </tr>
-                                    } *@
+                                    }
 
                                 </tbody>
                             </table>

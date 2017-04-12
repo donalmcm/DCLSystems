@@ -2,7 +2,6 @@ package models;
 
 import java.util.*;
 import javax.persistence.*;
-import javax.validation.Constraint;
 
 import play.data.format.*;
 import play.data.validation.*;
@@ -10,7 +9,7 @@ import play.data.validation.*;
 import com.avaje.ebean.*;
 
 @Entity
-public class RewardMembers
+public class RewardMember extends Model
 {
     @Id
     private Long id;
@@ -27,9 +26,11 @@ public class RewardMembers
     @Constraints.Required
     private int points;
 
-    public RewardMembers(){}
+    // Default constructor
+    public RewardMember(){}
 
-    public RewardMembers(Long id, String name, int address, int contactNumber, int points)
+    // constructor to initialise object
+    public RewardMember(Long id, String name, int address, int contactNumber, int points)
     {
         this.id = id;
         this.name = name;
@@ -38,11 +39,10 @@ public class RewardMembers
         this.points = points;
     }
 
-    public static Finder<Long,RewardMembers> find = new Finder<Long, RewardMembers>(RewardMembers.class);
+    public static Finder<Long, RewardMember> find = new Finder<Long,RewardMember>(RewardMember.class);
 
-    public static List<RewardMembers> findAll()
-    {
-        return RewardMembers.find.all();
+    public static List<RewardMember> findAll() {
+        return RewardMember.find.all();
     }
 
     public Long getId()
