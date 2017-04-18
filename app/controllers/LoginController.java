@@ -50,7 +50,7 @@ public class LoginController extends Controller{
     public Result logout() {
        session().clear();
        flash("success", "you've been logged out");
-       return redirect(routes.LoginController.login());
+       return redirect(controllers.routes.LoginController.login());
     }
 
 }

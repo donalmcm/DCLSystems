@@ -45,3 +45,24 @@ $(function() {
         }
     }
 });
+
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart);
+
+function drawChart() {
+
+    var data = google.visualization.arrayToDataTable([
+        ['Fuel Type', 'Percentage of Sales'],
+        ['Unleaded',     14],
+        ['Diesel',      10],
+
+    ]);
+
+    var options = {
+        title: 'Unleaded Vs Diesel Sales'
+    };
+
+    var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+    chart.draw(data, options);
+}

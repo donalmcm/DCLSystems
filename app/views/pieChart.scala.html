@@ -1,23 +1,23 @@
 
 @(user: models.users.User)
-@main("pieChart",user){
+    @main("pieChart",user){
 
-    <div id="page-wrapper">
-        <div class="row">
-            <div class="col-lg-12">
-                <h1 class="page-header">Pie Chart</h1>
+        <div id="page-wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">Pie Chart</h1>
+                </div>
+                    <!-- /.col-lg-12 -->
             </div>
-                <!-- /.col-lg-12 -->
-        </div>
-            <!-- /.row -->
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="panel panel-default">
-                    <div class="panel-body">
-                        <div class="flot-chart">
-
-                            <div class="flot-chart-content" id="flot-line-chart">
-                                <div class="pie">
+                <!-- /.row -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <div class="flot-chart">
+                                <div class="flot-chart-content" id="flot-line-chart">
+                                    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+                                    <div id="piechart" style="width: 900px; height: 500px;"></div>
                                 </div>
                             </div>
                         </div>
@@ -29,9 +29,6 @@
                 <!-- /.col-lg-12 -->
         </div>
             <!-- /.row -->
-    </div>
-        <!-- /#page-wrapper -->
-
-    </div>
-}
+            <!-- /#page-wrapper -->
+    }
 
