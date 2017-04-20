@@ -1,13 +1,8 @@
 package controllers;
 
-import play.api.Environment;
 import play.mvc.*;
-import play.data.*;
-import play.db.ebean.Transactional;
 
-import java.util.ArrayList;
 import java.util.List;
-import javax.inject.Inject;
 
 import views.html.*;
 // import models
@@ -58,6 +53,20 @@ public class HomeController extends Controller {
 	{
 		return ok(reports.render(getUserFromSession()));
 	}
+
+	public Result reportsAllSales(){return ok(reportsAllSales.render(getUserFromSession()));}
+
+	public Result reportsDiesel(){
+
+		List<DieselSale> dieselSaleList= DieselSale.findAll();
+
+		return ok(reportsDiesel.render(dieselSaleList, getUserFromSession()));}
+
+	public Result reportsUnleaded(){
+
+		List<UnleadedSale> unleadedSaleList = UnleadedSale.findAll();
+
+		return ok(reportsUnleaded.render(unleadedSaleList,getUserFromSession()));}
 
 	public Result barChart()
 	{

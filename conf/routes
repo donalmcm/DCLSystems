@@ -4,15 +4,30 @@
 
 # An example controller showing a sample home page
 
+#
+#Fuel
+#
 GET     /                       	controllers.HomeController.index
 GET	/fuelLevels			controllers.HomeController.fuelLevels
 GET	/orderFuel			controllers.HomeController.orderFuel
 GET	/setFuelPrices			controllers.HomeController.setFuelPrices
+#
+#reports
+#
 GET	/reports			controllers.HomeController.reports
+GET /reportsAllSales    controllers.HomeController.reportsAllSales
+GET /reportsDiesel      controllers.HomeController.reportsDiesel
+GET /reportsUnleaded      controllers.HomeController.reportsUnleaded
 GET 	/barChart			controllers.HomeController.barChart
 GET	/pieChart			controllers.HomeController.pieChart
 GET 	/lineChart			controllers.HomeController.lineChart
+#
+#roster
+#
 GET 	/roster				controllers.HomeController.roster
+#
+#rewardMembers
+#
 GET 	/rewardMembers			controllers.HomeController.rewardMembers
 
 GET 	/login			controllers.LoginController.login

@@ -10,16 +10,14 @@ import com.avaje.ebean.*;
 
 // Product Entity managed by the ORM
 @Entity
-public class FuelSales extends Model
+public class DieselSale extends Model
 {
     
         // Properties
         // Annotate id as the primary key
         @Id
-        private int id;
+        private Long id;
         // Other fields marked as being required (for validation purposes)
-        @Constraints.Required
-        private String fuelType;
         
         @Constraints.Required
         private String date;
@@ -49,16 +47,15 @@ public class FuelSales extends Model
         private double profit;
         
         // Default constructor
-        public FuelSales()
+        public DieselSale()
         {
             
         }
         
         // Constructor to initialise object
-        public FuelSales(int id, String fuelType, String date, double unitSP, double unitNet, double unitCP, double unitProfit, int qtySold, int valSold, int net, double profit)
+        public DieselSale(Long id, String date, double unitSP, double unitNet, double unitCP, double unitProfit, int qtySold, int valSold, int net, double profit)
         {
             this.id = id;
-            this.fuelType = fuelType;
             this.date = date;
             this.unitSP = unitSP;
             this.unitNet = unitNet;
@@ -70,25 +67,21 @@ public class FuelSales extends Model
             this.profit = profit;         
         }
 
+        public static Finder<Long,DieselSale> find = new Finder<Long,DieselSale>(DieselSale.class);
 
-    public int getId()
+        public static List<DieselSale> findAll(){
+            return DieselSale.find.all();
+        }
+
+
+    public Long getId()
     {
 	return id;
     }
 
-    public void setId(int id)
+    public void setId(Long id)
     {
    	this.id = id;
-    }
-
-    public String getFuelType() 
-    {
-        return fuelType;
-    }
-
-    public void setFuelType(String fuelType) 
-    {
-        this.fuelType = fuelType;
     }
 
     public String getDate() 

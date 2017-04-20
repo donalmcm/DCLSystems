@@ -3,6 +3,21 @@
 
 # --- !Ups
 
+create table diesel_sale (
+  id                            bigint not null,
+  date                          varchar(255),
+  unit_sp                       double,
+  unit_net                      double,
+  unit_cp                       double,
+  unit_profit                   double,
+  qty_sold                      integer,
+  val_sold                      integer,
+  net                           integer,
+  profit                        double,
+  constraint pk_diesel_sale primary key (id)
+);
+create sequence diesel_sale_seq;
+
 create table fuel_price (
   id                            bigint not null,
   name                          varchar(255),
@@ -47,6 +62,21 @@ create table tank (
 );
 create sequence tank_seq;
 
+create table unleaded_sale (
+  id                            bigint not null,
+  date                          varchar(255),
+  unit_sp                       double,
+  unit_net                      double,
+  unit_cp                       double,
+  unit_profit                   double,
+  qty_sold                      integer,
+  val_sold                      integer,
+  net                           integer,
+  profit                        double,
+  constraint pk_unleaded_sale primary key (id)
+);
+create sequence unleaded_sale_seq;
+
 create table user (
   email                         varchar(255) not null,
   role                          varchar(255),
@@ -57,6 +87,9 @@ create table user (
 
 
 # --- !Downs
+
+drop table if exists diesel_sale;
+drop sequence if exists diesel_sale_seq;
 
 drop table if exists fuel_price;
 drop sequence if exists fuel_price_seq;
@@ -69,6 +102,9 @@ drop sequence if exists reward_member_seq;
 
 drop table if exists tank;
 drop sequence if exists tank_seq;
+
+drop table if exists unleaded_sale;
+drop sequence if exists unleaded_sale_seq;
 
 drop table if exists user;
 
