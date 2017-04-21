@@ -20,7 +20,7 @@ if (id !=null) {
 }
 
 ctx.flash().put("error", "admin Login Required.");
-return CompletableFuture.completedFuture(redirect(routes.LoginController.login()));
+return CompletableFuture.completedFuture(redirect(routes.LoginController.index()));
 
 }
 

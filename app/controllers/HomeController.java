@@ -29,10 +29,7 @@ public class HomeController extends Controller {
          }
 
 
-	public Result index()
-	{
-		return ok(index.render(getUserFromSession()));
-	}
+
 
         public Result fuelLevels()
 	{
@@ -86,6 +83,11 @@ public class HomeController extends Controller {
 	public Result roster()
 	{
 		return ok(roster.render(getUserFromSession()));
+	}
+
+        public Result profile()
+	{
+		return ok(profile.render(getUserFromSession()));
 	}
 
 	public Result rewardMembers() {

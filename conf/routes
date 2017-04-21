@@ -7,7 +7,7 @@
 #
 #Fuel
 #
-GET     /                       	controllers.HomeController.index
+GET     /                       	controllers.LoginController.index
 GET	/fuelLevels			controllers.HomeController.fuelLevels
 GET	/orderFuel			controllers.HomeController.orderFuel
 GET	/setFuelPrices			controllers.HomeController.setFuelPrices
@@ -22,6 +22,8 @@ GET 	/barChart			controllers.HomeController.barChart
 GET	/pieChart			controllers.HomeController.pieChart
 GET 	/lineChart			controllers.HomeController.lineChart
 #
+GET         /profile                  controllers.HomeController.profile
+#
 #roster
 #
 GET 	/roster				controllers.HomeController.roster
@@ -30,7 +32,7 @@ GET 	/roster				controllers.HomeController.roster
 #
 GET 	/rewardMembers			controllers.HomeController.rewardMembers
 
-GET 	/login			controllers.LoginController.login
+
 POST     /loginSubmit           controllers.LoginController.loginSubmit
 GET      /logout                 controllers.LoginController.logout
 		

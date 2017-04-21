@@ -65,14 +65,12 @@
                             <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
                         </a>
                         <ul class="dropdown-menu dropdown-user">
-                            <li><a href="#"><i class="fa fa-user fa-fw"></i><a href=@routes.LoginController.logout()>User</a></a>
+                            <li><a href="#"><i class="fa fa-user fa-fw"></i><a href=@routes.HomeController.profile()>profile</a></a>
                             </li>
                             <li class="divider"></li>
                             <li @if(title == "Log out"){class="active"}>
                             @if(user != null){
                                 <a href=@routes.LoginController.logout()>Logout @user.getName()</a>
-                            }else {
-                                <a href=@routes.LoginController.login()>Login</a>
                             }
                             </li>
                         </ul>

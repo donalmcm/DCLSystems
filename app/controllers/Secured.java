@@ -20,6 +20,6 @@ public String getUsername(Context ctx) {
 
 @Override
 	public Result onUnauthorized(Context ctx) {
-	return redirect(controllers.routes.LoginController.login());
+	return redirect(controllers.routes.LoginController.index());
 }
 }
