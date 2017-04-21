@@ -26,22 +26,6 @@ create table fuel_price (
 );
 create sequence fuel_price_seq;
 
-create table fuel_sales (
-  id                            integer not null,
-  fuel_type                     varchar(255),
-  date                          varchar(255),
-  unit_sp                       double,
-  unit_net                      double,
-  unit_cp                       double,
-  unit_profit                   double,
-  qty_sold                      integer,
-  val_sold                      integer,
-  net                           integer,
-  profit                        double,
-  constraint pk_fuel_sales primary key (id)
-);
-create sequence fuel_sales_seq;
-
 create table reward_member (
   id                            bigint not null,
   name                          varchar(255),
@@ -93,9 +77,6 @@ drop sequence if exists diesel_sale_seq;
 
 drop table if exists fuel_price;
 drop sequence if exists fuel_price_seq;
-
-drop table if exists fuel_sales;
-drop sequence if exists fuel_sales_seq;
 
 drop table if exists reward_member;
 drop sequence if exists reward_member_seq;

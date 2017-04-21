@@ -20,7 +20,7 @@ public class FuelPrice extends Model
     @Constraints.Required
     private double price;
 
-    public FuelPrice(){}
+    public FuelPrice() {}
 
     public FuelPrice(Long id, String name, double price)
     {
@@ -28,6 +28,10 @@ public class FuelPrice extends Model
         this.name = name;
         this.price = price;
     }
+
+    public static Finder<Long,FuelPrice> find = new Finder<Long,FuelPrice>(FuelPrice.class);
+
+    public static List<FuelPrice> findAll(){return FuelPrice.find.all();}
 
     public Long getId()
     {
