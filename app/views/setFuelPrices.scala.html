@@ -21,7 +21,7 @@
                         <div class="leftcontact">	<!-- Left Hand Side -->
                             <!-- Start Loop -->
                             @for(f <- setFuelPrices){
-                            <a href="@routes.HomeController.updateFuelPrices(f.getId)" class="btn-xs btn-danger">
+                            
                 
                             
                             <p>Current @f.getName Price</p></td>
@@ -35,34 +35,14 @@
                                 <div class="validation"></div>
 
                             </div>
-
-                            }
+<div><a href="@routes.HomeController.updateFuelPrices(f.getId)" class="btn btn-primary">Update Price</a></div>
+}
+                           
                             <!-- End Loop -->
                         </div>
-                        <div class="rightcontact">	<!-- Right Hand Side -->
 
-							@for(f <- setFuelPrices){
-<a href="@routes.HomeController.updateFuelPrices(f.getId)" class="btn-xs btn-danger">
-                            <p>New @f.getName Price</p>
-                            <div class="form-group input-group">
-                                <span class="input-group-addon"><i class="fa fa-euro"></i>
-                                </span>
 
-                                <input type="text" class="form-control" data-rule="required" placeholder="Enter new @f.getName Price">
-
-                                <div class="validation"></div>
-
-                            </div>
-
-							}
-
-                            <br>
-                            <div style="float: right">
-                                    
-                            
-                            </div>
-                        </div>
-                    </div>
+                        
 
 
                         <!-- /.panel-body -->
@@ -75,4 +55,5 @@
         <!-- /#page-wrapper -->
 
     </div>
+
 }
