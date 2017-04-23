@@ -36,47 +36,18 @@
 
                         <div class="rightcontact">
 
-                            <div class="form-group">
-                                <p>Order Amount for Tank 1</p>
-                                <span class="icon-case">Ltrs</span>
-                                <input type="text" name="" id="" data-rule="required" data-msg=""/>
+                            <!-- Start of Loop -->
+                            @for(t <- tank){
+                            <p>Current @t.getName Level</p>
+                            <div class="form-group input-group">
+                                <span class="input-group-addon">Ltrs
+                                </span>
+                                <input type="text" class="form-control" data-rule="required" placeholder="Enter order amount" >
                                 <div class="validation"></div>
                             </div>
+                            }
+                                <!-- end of loop -->
 
-                            <div class="form-group">
-                                <p>Order Amount for Tank 2</p>
-                                <span class="icon-case">Ltrs</span>
-                                <input type="text" name="" id="" data-rule="required" data-msg=""/>
-                                <div class="validation"></div>
-                            </div>
-
-                            <div class="form-group">
-                                <p>Order Amount for Tank 3</p>
-                                <span class="icon-case">Ltrs</span>
-                                <input type="text" name="" id="" data-rule="required" data-msg=""/>
-                                <div class="validation"></div>
-                            </div>
-
-                            <div class="form-group">
-                                <p>Order Amount for Tank 4</p>
-                                <span class="icon-case">Ltrs</span>
-                                <input type="text" name="" id="" data-rule="required" data-msg=""/>
-                                <div class="validation"></div>
-                            </div>
-
-                            <div class="form-group">
-                                <p>Order Amount for Tank 5</p>
-                                <span class="icon-case">Ltrs</span>
-                                <input type="text" name="" id="" data-rule="required" data-msg=""/>
-                                <div class="validation"></div>
-                            </div>
-
-                            <div class="form-group">
-                                <p>Order Amount for Tank 6</p>
-                                <span class="icon-case">Ltrs</span>
-                                <input type="text" name="" id="" data-rule="required" data-msg=""/>
-                                <div class="validation"></div>
-                            </div>
 
                             <div style="float: right">
                                 <button class="btn btn-primary">Submit Order<br/></button>
