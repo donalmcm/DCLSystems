@@ -1,4 +1,4 @@
-@(user: models.users.User)
+@(tank: List[models.Tank],user: models.users.User)
 
 @main("index", user){
 
@@ -64,19 +64,19 @@
                         <div class="panel-heading">
 						Display of Fuel Tanks	
                         </div>
-						<!--begin for loop -->
-							<div class="panel-body">
-								<div id="tank-container">
-									<div id="tank-content"></div>
-								</div>
-								<div id = "tank-details">
-									<ul>&nbsp;&nbsp;Tank Name: </ul>	<!-- Get Values -->
-									<ul>&nbsp;&nbsp;Capacity: </ul>
-									<ul>&nbsp;&nbsp;Dip: </ul>
-									<ul>&nbsp;&nbsp;Ullage: </ul>
-								</div>
-							</div>
-						<!-- /end loop -->
+						@for(t <- tank) {
+                            <div class="panel-body">
+                                <div id="tank-container">
+                                    <div id="tank-content"></div>
+                                </div>
+                                <div id = "tank-details">
+                                    <ul>&nbsp;&nbsp;Tank Name: @t.getName</ul> <!-- Get Values -->
+                                    <ul>&nbsp;&nbsp;Capacity: @t.getCapacity</ul>
+                                    <ul>&nbsp;&nbsp;Dip: @t.getDip</ul>
+                                    <ul>&nbsp;&nbsp;Ullage: @t.getUllage</ul>
+                                </div>
+                            </div>
+                        }<!-- /end loop -->
 					</div>
 				</div>
 																

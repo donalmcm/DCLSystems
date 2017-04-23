@@ -1,4 +1,4 @@
-@(user: models.users.User)
+@(tank: List[models.Tank],user: models.users.User)
 
 @main("orderFuel", user){
 
@@ -19,50 +19,17 @@
                         <!-- /.panel-heading -->
                     <div class="panel-body">
                         <div class="leftcontact">	<!-- LEFT HAND SIDE START -->
-
-                            <div class="form-group">
-                                <p>Current Tank 1 Level - Diesel</p>
-                                <span class="icon-case">Ltrs</span>
-                                <input type="text" name="" id="" data-rule="required" readonly>
+                            <!-- Start of Loop -->
+                            @for(t <- tank){
+                            <p>Current @t.getName Level</p>
+                            <div class="form-group input-group">
+                                <span class="input-group-addon">Ltrs
+                                </span>
+                                <input type="text" class="form-control" data-rule="required" value="@t.getDip" readonly>
                                 <div class="validation"></div>
                             </div>
-
-                            <div class="form-group">
-                                <p>Current Tank 2 Level - Diesel</p>
-                                <span class="icon-case">Ltrs</span>
-                                <input type="text" name="" id="" data-rule="required" readonly>
-                                <div class="validation"></div>
-                            </div>
-
-                            <div class="form-group">
-                                <p>Current Tank 3 Level - Diesel</p>
-                                <span class="icon-case">Ltrs</span>
-                                <input type="text" name="" id="" data-rule="required" readonly>
-                                <div class="validation"></div>
-                            </div>
-
-                            <div class="form-group">
-                                <p>Current Tank 4 Level - Unleaded</p>
-                                <span class="icon-case">Ltrs</span>
-                                <input type="text" name="" id="" data-rule="required" readonly>
-                                <div class="validation"></div>
-                            </div>
-
-                            <div class="form-group">
-                                <p>Current Tank 5 Level - Unleaded</p>
-                                <span class="icon-case">Ltrs</span>
-                                <input type="text" name="" id="" data-rule="required" readonly>
-                                <div class="validation"></div>
-                            </div>
-
-                            <div class="form-group">
-                                <p>Current Tank 6 Level - Unleaded</p>
-                                <span class="icon-case">Ltrs</span>
-                                <input type="text" name="" id="" data-rule="required" readonly>
-                                <div class="validation"></div>
-                            </div>
-
-
+                            }
+                                <!-- end of loop -->
                         </div>			<!-- LEFT HAND SIDE FINISH -->
 
                         <!-- RIGHT HAND SIDE START -->

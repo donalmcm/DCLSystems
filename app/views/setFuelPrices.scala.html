@@ -1,4 +1,4 @@
-@(user: models.users.User)
+@(fuelPrice: List[models.FuelPrice],user: models.users.User)
 
 @main("setFuelPrices", user){
 
@@ -19,21 +19,18 @@
                         <!-- /.panel-heading -->
                     <div class="panel-body">
                         <div class="leftcontact">	<!-- Left Hand Side -->
-                            <p>Current Diesel Price</p>
+                            <!-- Start Loop -->
+                            @for(f <- fuelPrice){
+
+                            <p>Current @f.getName Price</p>
                             <div class="form-group input-group">
                                 <span class="input-group-addon"><i class="fa fa-eur"></i>
                                 </span>
-                                <input type="text" class="form-control" data-rule="required" value="119.8" readonly>
+                                <input type="text" class="form-control" data-rule="required" value="@f.getPrice" readonly>
                                 <div class="validation"></div>
                             </div>
-
-                            <p>Current Unleaded Price</p>
-                            <div class="form-group input-group">
-                                <span class="input-group-addon"><i class="fa fa-euro"></i>
-                                </span>
-                                <input type="text" class="form-control" data-rule="required" value="123.8" readonly>
-                                <div class="validation"></div>
-                            </div>
+                            }
+                            <!-- End Loop -->
                         </div>
                         <div class="rightcontact">	<!-- Right Hand Side -->
 

@@ -46,6 +46,12 @@ public class Tank extends Model
         this.ullage = ullage;
     }
 
+    public static Finder<Long,Tank> find = new Finder<Long,Tank>(Tank.class);
+
+    public static List<Tank> findAll(){
+        return Tank.find.all();
+    }
+
     public int getId() 
     {
         return id;

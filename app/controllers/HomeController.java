@@ -31,19 +31,26 @@ public class HomeController extends Controller {
 
 
 
-        public Result fuelLevels()
-	{
-		return ok(fuelLevels.render(getUserFromSession()));
+        public Result fuelLevels() {
+
+		List<Tank> tankList = Tank.findAll();
+
+
+		return ok(fuelLevels.render(tankList, getUserFromSession()));
 	}
 
 	public Result orderFuel()
 	{
-		return ok(orderFuel.render(getUserFromSession()));
+		List<Tank> tankList = Tank.findAll();
+
+		return ok(orderFuel.render(tankList,getUserFromSession()));
 	}
 	
-	public Result setFuelPrices()
-	{
-		return ok(setFuelPrices.render(getUserFromSession()));
+	public Result setFuelPrices() {
+
+		List<FuelPrice> fuelPriceList = FuelPrice.findAll();
+
+		return ok(setFuelPrices.render(fuelPriceList,getUserFromSession()));
 	}
 
 	public Result reports()
