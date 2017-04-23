@@ -36,6 +36,9 @@ GET 	/rewardMembers			controllers.HomeController.rewardMembers
 POST     /loginSubmit           controllers.LoginController.loginSubmit
 GET      /logout                 controllers.LoginController.logout
 		
+POST     /addFuelPricesSubmit           controllers.HomeController.addFuelPricesSubmit
+GET      /addPrices                 controllers.HomeController.addPrices
+GET      /updateFuelPrices/:id                 controllers.HomeController.updateFuelPrices(id:Long)
 
 # An example controller showing how to use dependency injection
 GET     /count                      controllers.CountController.count

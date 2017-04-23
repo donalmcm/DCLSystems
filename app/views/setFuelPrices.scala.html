@@ -1,4 +1,4 @@
-@(fuelPrice: List[models.FuelPrice],user: models.users.User)
+@(setFuelPrices: List[models.FuelPrice],user: models.users.User)
 
 @main("setFuelPrices", user){
 
@@ -20,33 +20,46 @@
                     <div class="panel-body">
                         <div class="leftcontact">	<!-- Left Hand Side -->
                             <!-- Start Loop -->
-                            @for(f <- fuelPrice){
+                            @for(f <- setFuelPrices){
+                            <a href="@routes.HomeController.updateFuelPrices(f.getId)" class="btn-xs btn-danger">
+                
+                            
+                            <p>Current @f.getName Price</p></td>
+                            
 
-                            <p>Current @f.getName Price</p>
                             <div class="form-group input-group">
                                 <span class="input-group-addon"><i class="fa fa-eur"></i>
                                 </span>
                                 <input type="text" class="form-control" data-rule="required" value="@f.getPrice" readonly>
+
                                 <div class="validation"></div>
+
                             </div>
+
                             }
                             <!-- End Loop -->
                         </div>
                         <div class="rightcontact">	<!-- Right Hand Side -->
 
-							@for(f <- fuelPrice){
+							@for(f <- setFuelPrices){
+<a href="@routes.HomeController.updateFuelPrices(f.getId)" class="btn-xs btn-danger">
                             <p>New @f.getName Price</p>
                             <div class="form-group input-group">
                                 <span class="input-group-addon"><i class="fa fa-euro"></i>
                                 </span>
+
                                 <input type="text" class="form-control" data-rule="required" placeholder="Enter new @f.getName Price">
+
                                 <div class="validation"></div>
+
                             </div>
+
 							}
 
                             <br>
                             <div style="float: right">
-                                    <button class="btn btn-primary">Submit Prices<br/></button>
+                                    
+                            
                             </div>
                         </div>
                     </div>

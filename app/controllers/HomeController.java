@@ -1,8 +1,13 @@
 package controllers;
 
+import play.api.Environment;
 import play.mvc.*;
+import play.data.*;
+import play.db.ebean.Transactional;
 
+import java.util.ArrayList;
 import java.util.List;
+import javax.inject.Inject;
 
 import views.html.*;
 // import models
@@ -46,12 +51,7 @@ public class HomeController extends Controller {
 		return ok(orderFuel.render(tankList,getUserFromSession()));
 	}
 	
-	public Result setFuelPrices() {
 
-		List<FuelPrice> fuelPriceList = FuelPrice.findAll();
-
-		return ok(setFuelPrices.render(fuelPriceList,getUserFromSession()));
-	}
 
 	public Result reports()
 	{
@@ -103,6 +103,93 @@ public class HomeController extends Controller {
 
 		// render the list members view, passing parameters
 		return ok(rewardMembers.render(rewardMemberList, getUserFromSession()));}
+
+                
+
+                @Transactional
+         	public Result updateFuelPrices(Long id) {
+
+                FuelPrice f;
+                Form<FuelPrice> fuelPriceForm;
+
+                try{
+                     f=FuelPrice.find.byId(id);
+            
+                     fuelPriceForm = formFactory.form(FuelPrice.class).fill(f);
+    
+                } catch(Exception ex) {
+    
+                     return badRequest("error");
+                }
+		return ok(addPrices.render(fuelPriceForm,getUserFromSession()));
+	}
+
+
+         public Result setFuelPrices() {
+
+
+		List<FuelPrice> fuelPriceList = FuelPrice.findAll();
+                
+		return ok(setFuelPrices.render(fuelPriceList,getUserFromSession()));
+	}
+
+
+
+        public Result addPrices() {
+                
+                   Form<FuelPrice> addFuelPricesForm = formFactory.form(FuelPrice.class);
+
+		return ok(addPrices.render(addFuelPricesForm,getUserFromSession()));
+	}
+
+        private FormFactory formFactory;
+      
+        @Inject
+        public HomeController(FormFactory f) {
+            this.formFactory=f;
+        }
+
+        public Result addFuelPricesSubmit(){
+
+            Form<FuelPrice> newFuelPricesForm = formFactory.form(FuelPrice.class).bindFromRequest();
+
+
+
+            if(newFuelPricesForm.hasErrors()){
+
+            return badRequest(addPrices.render(newFuelPricesForm,getUserFromSession()));
+
+	}
+
+
+
+         FuelPrice f = newFuelPricesForm.get();
+
+
+
+        if (f.getId() == 0) {
+
+            f.save();
+
+         }
+
+         else if(f.getId() != 0) {
+
+            f.update();
+
+         }
+
+
+
+          flash("success", "Fuel Price " +f.getName() + " has been created/updated");
+
+
+
+          return redirect(controllers.routes.HomeController.setFuelPrices());
+
+
+
+}
 
 }
 
