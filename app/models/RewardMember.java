@@ -18,7 +18,7 @@ public class RewardMember extends Model
     private String name;
 
     @Constraints.Required
-    private int address;
+    private String address;
 
     @Constraints.Required
     private int contactNumber;
@@ -30,7 +30,7 @@ public class RewardMember extends Model
     public RewardMember(){}
 
     // constructor to initialise object
-    public RewardMember(Long id, String name, int address, int contactNumber, int points)
+    public RewardMember(Long id, String name, String address, int contactNumber, int points)
     {
         this.id = id;
         this.name = name;
@@ -65,12 +65,12 @@ public class RewardMember extends Model
         this.name = name;
     }
 
-    public int getAddress()
+    public String getAddress()
     {
         return address;
     }
 
-    public void setAddress(int address)
+    public void setAddress(String address)
     {
         this.address = address;
     }

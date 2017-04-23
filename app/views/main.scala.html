@@ -88,7 +88,7 @@
                                 <!-- /input-group -->
 
                             <li>
-                                <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Fuel<span class="fa arrow"></span></a>
+                                <a href="#"><i class="fa fa-dashboard fa-fw"></i> Fuel<span class="fa arrow"></span></a>
                                 <ul class="nav nav-second-level">
 
                                     <li @if(title == "fuelLevels"){class="active"}><a href=@routes.HomeController.fuelLevels()>Fuel Levels</a></li>
@@ -104,18 +104,18 @@
 
                                     <li @if(title == "reports"){class="active"}><a href=@routes.HomeController.reports()>Reports</a></li>
 
-                                    <li @if(title == "barChart"){class="active"}><a href=@routes.HomeController.barChart()>Bar Chart</a></li>
+                                    <li @if(title == "barChart"){class="active"}><a href=@routes.HomeController.barChart()><i class="fa fa-bar-chart"></i> Bar Chart</a></li>
 
-                                    <li @if(title == "pieChart"){class="active"}><a href=@routes.HomeController.pieChart()>Pie Chart</a></li>
+                                    <li @if(title == "pieChart"){class="active"}><a href=@routes.HomeController.pieChart()><i class="fa fa-pie-chart"></i> Pie Chart</a></li>
 
-                                    <li @if(title == "lineChart"){class="active"}><a href=@routes.HomeController.lineChart()>Line Chart</a></li>
+                                    <li @if(title == "lineChart"){class="active"}><a href=@routes.HomeController.lineChart()><i class="fa fa-line-chart"></i> Line Chart</a></li>
 
                                 </ul>
                             </li>
 
                             <li @if(title == "tables"){class="active"}><a href=@routes.HomeController.roster()><i class="fa fa-table fa-fw"></i> Roster</a></li>
 
-                            <li @if(title == "forms"){class="active"}><a href=@routes.HomeController.rewardMembers()><i class="fa fa-edit fa-fw"></i> Reward Members</a></li>
+                            <li @if(title == "forms"){class="active"}><a href=@routes.HomeController.rewardMembers()><i class="fa fa-users fa-fw"></i> Reward Members</a></li>
 
                         </ul>
                     </div>

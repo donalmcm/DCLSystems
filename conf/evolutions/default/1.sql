@@ -29,7 +29,7 @@ create sequence fuel_price_seq;
 create table reward_member (
   id                            bigint not null,
   name                          varchar(255),
-  address                       integer,
+  address                       varchar(255),
   contact_number                integer,
   points                        integer,
   constraint pk_reward_member primary key (id)
