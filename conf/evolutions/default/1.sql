@@ -3,6 +3,22 @@
 
 # --- !Ups
 
+create table all_sales (
+  id                            bigint not null,
+  date                          varchar(255),
+  fuel_type                     varchar(255),
+  unit_sp                       double,
+  unit_net                      double,
+  unit_cp                       double,
+  unit_profit                   double,
+  qty_sold                      integer,
+  val_sold                      integer,
+  net                           integer,
+  profit                        double,
+  constraint pk_all_sales primary key (id)
+);
+create sequence all_sales_seq;
+
 create table diesel_sale (
   id                            bigint not null,
   date                          varchar(255),
@@ -71,6 +87,9 @@ create table user (
 
 
 # --- !Downs
+
+drop table if exists all_sales;
+drop sequence if exists all_sales_seq;
 
 drop table if exists diesel_sale;
 drop sequence if exists diesel_sale_seq;

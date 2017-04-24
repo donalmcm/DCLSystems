@@ -14,7 +14,7 @@
             <div class="col-lg-12">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        Please enter order amount below
+                        Please select a tank to Order for below
                     </div>
                         <!-- /.panel-heading -->
                     <div class="panel-body">
@@ -28,34 +28,13 @@
                                 <input type="text" class="form-control" data-rule="required" value="@t.getDip" readonly>
                                 <div class="validation"></div>
                             </div>
+                                <div><a href="@routes.HomeController.updateTank(t.getId)" class="btn btn-primary">Order Fuel</a></div>
                             }
                                 <!-- end of loop -->
                         </div>			<!-- LEFT HAND SIDE FINISH -->
 
                         <!-- RIGHT HAND SIDE START -->
 
-                        <div class="rightcontact">
-
-                            <!-- Start of Loop -->
-                            @for(t <- tank){
-                            <p>Current @t.getName Level</p>
-                            <div class="form-group input-group">
-                                <span class="input-group-addon">Ltrs
-                                </span>
-                                <input type="text" class="form-control" data-rule="required" placeholder="Enter order amount" >
-                                <div class="validation"></div>
-                            </div>
-                            }
-                                <!-- end of loop -->
-
-
-                            <div style="float: right">
-                                <button class="btn btn-primary">Submit Order<br/></button>
-                            </div>
-
-                                <!-- RIGHT HAND SIDE FINISH -->
-
-                        </div>
                     </div>
                         <!-- /.panel-body -->
                 </div>

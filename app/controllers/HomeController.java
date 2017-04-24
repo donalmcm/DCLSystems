@@ -35,7 +35,7 @@ public class HomeController extends Controller {
 
 
 
-
+	// ------------------- FUEL LEVELS ---------------------------------------------------------
         public Result fuelLevels() {
 
 		List<Tank> tankList = Tank.findAll();
@@ -43,22 +43,74 @@ public class HomeController extends Controller {
 
 		return ok(fuelLevels.render(tankList, getUserFromSession()));
 	}
+	// ------------------- FUEL ORDER & UPDATE FUEL ORDER ---------------------------------------
+	@Transactional
+	public Result updateTank(Long id) {
 
+		Tank t;
+		Form<Tank> TankForm;
+
+		try {
+			t = Tank.find.byId(id);
+
+			TankForm = formFactory.form(Tank.class).fill(t);
+
+		} catch (Exception ex) {
+
+			return badRequest("error");
+		}
+		return ok(newFuelOrder.render(TankForm, getUserFromSession()));
+	}
 	public Result orderFuel()
 	{
 		List<Tank> tankList = Tank.findAll();
 
 		return ok(orderFuel.render(tankList,getUserFromSession()));
 	}
-	
 
+	public Result newFuelOrder(){
 
+		Form<Tank> newFuelOrderForm = formFactory.form(Tank.class);
+
+		return ok(newFuelOrder.render(newFuelOrderForm,getUserFromSession()));
+	}
+
+	private FormFactory formTank;
+
+	public Result newFuelOrderSubmit(){
+
+		Form<Tank> newFuelOrderForm = formTank.form(Tank.class).bindFromRequest();
+
+		if(newFuelOrderForm.hasErrors()){
+			return badRequest(newFuelOrder.render(newFuelOrderForm,getUserFromSession()));
+		}
+
+		Tank t = newFuelOrderForm.get();
+
+		if(t.getId() == 0){
+			t.save();
+		}
+
+		else if(t.getId() !=0){
+			t.update();
+		}
+
+		flash("success", "Fuel Order for" + t.getName() + "has been processed");
+
+		return redirect(controllers.routes.HomeController.orderFuel());
+	}
+
+	// --------------------------- REPORTS ---------------------------------------------------------
 	public Result reports()
 	{
 		return ok(reports.render(getUserFromSession()));
 	}
 
-	public Result reportsAllSales(){return ok(reportsAllSales.render(getUserFromSession()));}
+	public Result reportsAllSales(){
+
+		List<AllSales> allSalesList = AllSales.findAll();
+
+		return ok(reportsAllSales.render(allSalesList,getUserFromSession()));}
 
 	public Result reportsDiesel(){
 
@@ -71,6 +123,8 @@ public class HomeController extends Controller {
 		List<UnleadedSale> unleadedSaleList = UnleadedSale.findAll();
 
 		return ok(reportsUnleaded.render(unleadedSaleList,getUserFromSession()));}
+
+	// --------------------------- CHARTS ------------------------------------------------------------
 
 	public Result barChart()
 	{
@@ -87,15 +141,21 @@ public class HomeController extends Controller {
 		return ok(lineChart.render(getUserFromSession()));
 	}
 
+	// ---------------------------- ROSTER ----------------------------------------------------------
+
 	public Result roster()
 	{
 		return ok(roster.render(getUserFromSession()));
 	}
 
+	// ----------------------------- PROFILE --------------------------------------------------------
+
         public Result profile()
 	{
 		return ok(profile.render(getUserFromSession()));
 	}
+
+	// ---------------------------- REWARD MEMBERS ---------------------------------------------------
 
 	public Result rewardMembers() {
 		// Get the list of members
@@ -105,7 +165,7 @@ public class HomeController extends Controller {
 		return ok(rewardMembers.render(rewardMemberList, getUserFromSession()));}
 
                 
-
+	// ---------------------------- UPDATE FUEL PRICES -------------------------------------------------
                 @Transactional
          	public Result updateFuelPrices(Long id) {
 
@@ -146,50 +206,38 @@ public class HomeController extends Controller {
       
         @Inject
         public HomeController(FormFactory f) {
-            this.formFactory=f;
+
+			this.formFactory=f;
         }
 
         public Result addFuelPricesSubmit(){
 
             Form<FuelPrice> newFuelPricesForm = formFactory.form(FuelPrice.class).bindFromRequest();
 
-
-
             if(newFuelPricesForm.hasErrors()){
 
             return badRequest(addPrices.render(newFuelPricesForm,getUserFromSession()));
 
-	}
+			}
 
-
-
-         FuelPrice f = newFuelPricesForm.get();
-
-
+			FuelPrice f = newFuelPricesForm.get();
 
         if (f.getId() == 0) {
 
             f.save();
-
          }
 
          else if(f.getId() != 0) {
 
             f.update();
-
          }
-
-
 
           flash("success", "Fuel Price " +f.getName() + " has been created/updated");
 
+			return redirect(controllers.routes.HomeController.setFuelPrices());
 
+	}
 
-          return redirect(controllers.routes.HomeController.setFuelPrices());
-
-
-
-}
 
 }
 

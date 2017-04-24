@@ -1,4 +1,4 @@
-@(user: models.users.User)
+@(allSales: List[models.AllSales],user: models.users.User)
 
 @main("reportsAllSales",user){
 
@@ -23,6 +23,7 @@
                                 <tr>
                                     <th>ID</th>
                                     <th>Date</th>
+                                    <th>Fuel Type</th>
                                     <th>Unit Sp</th>
                                     <th>Unit Net</th>
                                     <th>Unit Cp</th>
@@ -34,30 +35,21 @@
                                 </tr>
                             </thead>
                             <tbody>
-                         @*   @for(d <- reportsDiesel) {
+                            @for(a <- allSales) {
                                 <tr>
-                                    <td>@d.getId</td>
-                                    <td>@u.getId</td>
-                                    <td>@d.getDate</td>
-                                    <td>@u.getDate</td>
-                                    <td>@d.getUnitSP</td>
-                                    <td>@u.getUnitSP</td>
-                                    <td>@d.getUnitNet</td>
-                                    <td>@u.getUnitNet</td>
-                                    <td>@d.getUnitCP</td>
-                                    <td>@u.getUnitCP</td>
-                                    <td>@d.getUnitProfit</td>
-                                    <td>@u.getUnitProfit</td>
-                                    <td>@d.getQtySold</td>
-                                    <td>@u.getQtySold</td>
-                                    <td>@d.getValSold</td>
-                                    <td>@u.getValSold</td>
-                                    <td>@d.getNet</td>
-                                    <td>@u.getNet</td>
-                                    <td>@d.getProfit</td>
-                                    <td>@u.getProfit</td>
+                                    <td>@a.getId</td>
+                                    <td>@a.getDate</td>
+                                    <td>@a.getFuelType</td>
+                                    <td>@a.getUnitSP</td>
+                                    <td>@a.getUnitNet</td>
+                                    <td>@a.getUnitCP</td>
+                                    <td>@a.getUnitProfit</td>
+                                    <td>@a.getQtySold</td>
+                                    <td>@a.getValSold</td>
+                                    <td>@a.getNet</td>
+                                    <td>@a.getProfit</td>
                                 </tr>
-                            }   *@
+                            }
                             </tbody>
                         </table>
                     </div>

@@ -7,39 +7,53 @@
 #
 #Fuel
 #
-GET     /                       	controllers.LoginController.index
+GET /                   controllers.LoginController.index
 GET	/fuelLevels			controllers.HomeController.fuelLevels
 GET	/orderFuel			controllers.HomeController.orderFuel
-GET	/setFuelPrices			controllers.HomeController.setFuelPrices
+GET	/setFuelPrices	    controllers.HomeController.setFuelPrices
 #
 #reports
 #
 GET	/reports			controllers.HomeController.reports
 GET /reportsAllSales    controllers.HomeController.reportsAllSales
 GET /reportsDiesel      controllers.HomeController.reportsDiesel
-GET /reportsUnleaded      controllers.HomeController.reportsUnleaded
-GET 	/barChart			controllers.HomeController.barChart
-GET	/pieChart			controllers.HomeController.pieChart
-GET 	/lineChart			controllers.HomeController.lineChart
+GET /reportsUnleaded    controllers.HomeController.reportsUnleaded
 #
-GET         /profile                  controllers.HomeController.profile
+#Charts
+#
+GET /barChart			controllers.HomeController.barChart
+GET	/pieChart			controllers.HomeController.pieChart
+GET /lineChart			controllers.HomeController.lineChart
+#
+#Profile
+#
+GET /profile            controllers.HomeController.profile
 #
 #roster
 #
-GET 	/roster				controllers.HomeController.roster
+GET /roster				controllers.HomeController.roster
 #
 #rewardMembers
 #
-GET 	/rewardMembers			controllers.HomeController.rewardMembers
-
-
+GET /rewardMembers		controllers.HomeController.rewardMembers
+#
+#Login/Logout
+#
 POST     /loginSubmit           controllers.LoginController.loginSubmit
 GET      /logout                 controllers.LoginController.logout
-		
-POST     /addFuelPricesSubmit           controllers.HomeController.addFuelPricesSubmit
+#
+#Update Fuel Prices
+#
+POST     /addFuelPricesSubmit       controllers.HomeController.addFuelPricesSubmit
 GET      /addPrices                 controllers.HomeController.addPrices
-GET      /updateFuelPrices/:id                 controllers.HomeController.updateFuelPrices(id:Long)
-
+GET      /updateFuelPrices/:id      controllers.HomeController.updateFuelPrices(id:Long)
+#
+#Update Tank Levels
+#
+POST    /newFuelOrderSubmit         controllers.HomeController.newFuelOrderSubmit
+GET     /newFuelOrder               controllers.HomeController.newFuelOrder
+GET     /updateTank/:id             controllers.HomeController.updateTank(id:Long)
+#
 # An example controller showing how to use dependency injection
 GET     /count                      controllers.CountController.count
 # An example controller showing how to write asynchronous code
