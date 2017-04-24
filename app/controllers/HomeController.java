@@ -75,11 +75,11 @@ public class HomeController extends Controller {
 		return ok(newFuelOrder.render(newFuelOrderForm,getUserFromSession()));
 	}
 
-	private FormFactory formTank;
+
 
 	public Result newFuelOrderSubmit(){
 
-		Form<Tank> newFuelOrderForm = formTank.form(Tank.class).bindFromRequest();
+		Form<Tank> newFuelOrderForm = formFactory.form(Tank.class).bindFromRequest();
 
 		if(newFuelOrderForm.hasErrors()){
 
