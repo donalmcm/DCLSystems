@@ -5,8 +5,8 @@
 @main("newFuelOrder",user) {
     <div id="page-wrapper">
         <h3>Order Amount</h3>
-
-        @form(action = routes.HomeController.newFuelOrderSubmit(), 'class -> "form-horizontal", 'role->"form") {
+        <div class="leftcontact">
+        @form(action = routes.HomeController.newFuelOrderSubmit(), 'class -> "form", 'role->"form") {
 
             @inputText(newFuelOrderForm("name"), '_label -> "Tank",'class -> "form-control")
             @inputText(newFuelOrderForm("dip"), '_label -> "Amount",'class -> "form-control")
@@ -16,9 +16,9 @@
             <div class="action">
                 <input type="submit" value="Create Order" class="btn btn-primary">
                 <a href="@routes.HomeController.orderFuel()">
-
                 </a>
             </div>
         }
+        </div>
     </div>
 }

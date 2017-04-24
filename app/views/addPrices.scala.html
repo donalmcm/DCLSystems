@@ -5,8 +5,10 @@
 @main("addPrices",user) {
 <div id="page-wrapper">
       <h3>New fuel prices</h3>
-    
-       @form(action = routes.HomeController.addFuelPricesSubmit(), 'class -> "form-horizontal", 'role->"form") {
+
+    <div class="leftcontact">
+
+       @form(action = routes.HomeController.addFuelPricesSubmit(), 'class -> "form", 'role->"form") {
 
            @inputText(addFuelPricesForm("name"), '_label -> "Type",'class -> "form-control")
            @inputText(addFuelPricesForm("price"), '_label -> "Price",'class -> "form-control")
@@ -16,9 +18,9 @@
     <div class="action">
          <input type="submit" value="Update Fuel Price" class="btn btn-primary">
              <a href="@routes.HomeController.setFuelPrices()">
-                  
              </a>
     </div>
     }
+        </div>
 </div>
 }
