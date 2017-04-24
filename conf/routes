@@ -54,6 +54,11 @@ POST    /newFuelOrderSubmit         controllers.HomeController.newFuelOrderSubmi
 GET     /newFuelOrder               controllers.HomeController.newFuelOrder
 GET     /updateTank/:id             controllers.HomeController.updateTank(id:Long)
 #
+POST     /addMemberSubmit           controllers.HomeController.addMemberSubmit
+GET      /addMember                 controllers.HomeController.addMember
+GET      /delMember/:id                 controllers.HomeController.deleteMember(id:Long)
+GET      /updateMember/:id                 controllers.HomeController.updateMember(id:Long)
+#
 # An example controller showing how to use dependency injection
 GET     /count                      controllers.CountController.count
 # An example controller showing how to write asynchronous code

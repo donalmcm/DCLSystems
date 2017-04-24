@@ -239,6 +239,87 @@ public class HomeController extends Controller {
 
 	}
 
+        public Result addMember() {
+                
+                   Form<RewardMember> addMemberForm = formFactory.form(RewardMember.class);
+
+		return ok(addMember.render(addMemberForm,getUserFromSession()));
+	}
+
+
+        public Result addMemberSubmit(){
+
+            Form<RewardMember> newMemberForm = formFactory.form(RewardMember.class).bindFromRequest();
+
+
+
+            if(newMemberForm.hasErrors()){
+
+            return badRequest(addMember.render(newMemberForm,getUserFromSession()));
+
+	}
+
+
+
+         RewardMember r = newMemberForm.get();
+
+
+
+        if (r.getId() == null) {
+
+            r.save();
+
+         }
+
+         else if(r.getId() != null) {
+
+            r.update();
+
+         }
+
+
+
+          flash("success", "Member " +r.getName() + " has been created/updated");
+
+
+
+          return redirect(controllers.routes.HomeController.rewardMembers());
+
+
+
+          }
+
+          public Result deleteMember(Long id) {
+
+          RewardMember.find.ref(id).delete();
+          flash("success", "Member has been deleted");
+ 
+          return redirect(routes.HomeController.rewardMembers());
+
+
+          }
+          
+           @Transactional
+         	public Result updateMember(Long id) {
+
+                RewardMember r;
+                Form<RewardMember> MemberForm;
+
+                try{
+                     r=RewardMember.find.byId(id);
+            
+                     MemberForm = formFactory.form(RewardMember.class).fill(r);
+    
+                } catch(Exception ex) {
+    
+                     return badRequest("error");
+                }
+		return ok(addMember.render(MemberForm,getUserFromSession()));
+	}
+
+
+        
+
 
 }
 

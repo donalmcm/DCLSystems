@@ -1,0 +1,26 @@
+@import helper._
+
+@(addMemberForm: Form[models.RewardMember],user: models.users.User)
+
+@main("addMember",user) {
+<div id="page-wrapper">
+      <h3>Reward Memeber with additional points</h3>
+    
+       @form(action = routes.HomeController.addMemberSubmit(), 'class -> "form-horizonta", 'role->"form") {
+
+           @inputText(addMemberForm("name"), '_label -> "Name",'class -> "form-control")
+           @inputText(addMemberForm("address"), '_label -> "Address",'class -> "form-control")
+           @inputText(addMemberForm("contactNumber"), '_label -> "Contact Number",'class -> "form-control")
+           @inputText(addMemberForm("points"), '_label -> "Points",'class -> "form-control")
+
+           @inputText(addMemberForm("id"), '_label -> "",'hidden -> "hidden")
+
+    <div class="action">
+         <input type="submit" value="Add Info" class="btn btn-primary">
+             <a href="@routes.HomeController.rewardMembers()">
+                  
+             </a>
+    </div>
+    }
+</div>
+}

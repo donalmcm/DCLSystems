@@ -36,19 +36,31 @@
                                             <td>@r.getAddress</td>
                                             <td>@r.getContactNumber</td>
                                             <td>@r.getPoints</td>
-					    <td><input type="checkbox" name="member">
+					    <td>
+                                                 <a href="@routes.HomeController.deleteMember(r.getId)" class="btn-xs btn-danger" onclick="return confirmDel();">
+                                                 </a>
+                                            </td>
+                                            <td>
+                                                 <a href="@routes.HomeController.updateMember(r.getId)" class="btn-xs btn-danger">
+                                                  <span class="glyphicon glyphicon-pencil"></span>
+                                                 </a>
+                                            </td>
                                         </tr>
                                     }
                                 </tbody>
                             </table>
 
-								<div style="float: right">
-                                    <button class="btn btn-primary">Reward Members<br/></button>
+								
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+<script>
+function confirmDel() {
+     return confirm('Are you sure?');
+}
+</script>
 
     }
