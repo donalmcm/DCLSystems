@@ -5,6 +5,8 @@
 @main("addMember",user) {
 <div id="page-wrapper">
       <h3>Reward Memeber with additional points</h3>
+
+    <div class="leftcontact">
     
        @form(action = routes.HomeController.addMemberSubmit(), 'class -> "form-horizonta", 'role->"form") {
 
@@ -16,11 +18,12 @@
            @inputText(addMemberForm("id"), '_label -> "",'hidden -> "hidden")
 
     <div class="action">
-         <input type="submit" value="Add Info" class="btn btn-primary">
+         <input type="submit" value="Update Information" class="btn btn-primary">
              <a href="@routes.HomeController.rewardMembers()">
                   
              </a>
     </div>
     }
+        </div>
 </div>
 }

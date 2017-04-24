@@ -46,7 +46,7 @@ create table reward_member (
   id                            bigint not null,
   name                          varchar(255),
   address                       varchar(255),
-  contact_number                integer,
+  contact_number                varchar(255),
   points                        integer,
   constraint pk_reward_member primary key (id)
 );

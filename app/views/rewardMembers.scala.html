@@ -26,6 +26,8 @@
                                         <th>Address</th>
                                         <th>Contact Number</th>
                                         <th>Points</th>
+                                        <th>Remove</th>
+                                        <th>Edit</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -38,11 +40,12 @@
                                             <td>@r.getPoints</td>
 					    <td>
                                                  <a href="@routes.HomeController.deleteMember(r.getId)" class="btn-xs btn-danger" onclick="return confirmDel();">
+                                                     <i class="fa fa-trash-o" aria-hidden="true"></i>
                                                  </a>
                                             </td>
                                             <td>
                                                  <a href="@routes.HomeController.updateMember(r.getId)" class="btn-xs btn-danger">
-                                                  <span class="glyphicon glyphicon-pencil"></span>
+                                                  <i class="fa fa-pencil" aria-hidden="true"></i>
                                                  </a>
                                             </td>
                                         </tr>

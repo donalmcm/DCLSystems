@@ -45,6 +45,42 @@ $(function() {
         }
     }
 });
+google.charts.load('current', {packages: ['corechart', 'line']});
+google.charts.setOnLoadCallback(drawCurveTypes);
+
+function drawCurveTypes() {
+    var data = new google.visualization.DataTable();
+    data.addColumn('number', 'X');
+    data.addColumn('number', 'Unleaded');
+    data.addColumn('number', 'Diesel');
+
+    data.addRows([
+        [0, 3119, 8499],    [1, 2771, 7855],   [2, 1278, 9259],  [3, 1889, 8988],   [4,2859 , 8892],  [5, 2748, 8046],
+        [6, 1290, 8889],   [7, 1975, 8917],  [8, 1515, 7424],  [9, 2503, 9257],  [10, 1683, 8096], [11, 2731, 7770],
+        [12, 2996, 7886], [13, 1444, 8219], [14, 2399, 9210], [15, 2033, 7407], [16,2361 , 8193], [17,2905 ,7573 ],
+        [18, 1490, 8478], [19, 1716, 8890], [20,3054 , 8962], [21,1302 , 9284], [22, 2158, 8388], [23, 2557, 8513],
+        [24, 2876, 8806], [25, 2850, 9129], [26, 2882, 8483], [27, 2231, 8683], [28, 2951, 8739], [29, 3177, 9311],
+        [30, 1756, 8224], [31, 2621, 9035], [32,2313 , 8141], [33,3106 , 8369], [34, 2663, 8442], [35,3042 , 9196],
+        [36, 2275, 7920], [37, 1388, 9265], [38, 2271, 9184], [39,1850 , 8451], [40, 1672, 7673], [41, 2802, 8594],
+        [42, 2271, 7699], [43, 1501, 8624], [44, 2114, 8964], [45, 1556, 8709], [46, 2357, 8528], [47, 1536, 8089],
+        [48, 2007, 7524], [49, 2977, 5828], [50, 3099, 7559], [51, 2766, 9139], [52, 2924, 8358]
+    ]);
+
+    var options = {
+        hAxis: {
+            title: 'Week'
+        },
+        vAxis: {
+            title: 'Sales'
+        },
+        series: {
+            1: {curveType: 'function'}
+        }
+    };
+
+    var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+    chart.draw(data, options);
+}
 
 google.charts.load('current', {'packages':['corechart']});
 google.charts.setOnLoadCallback(drawChart);
@@ -102,42 +138,7 @@ google.setOnLoadCallback(drawVisualization);
 google.charts.load('current', {packages: ['corechart', 'line']});
 google.charts.setOnLoadCallback(drawCurveTypes);
 
-function drawCurveTypes() {
-    var data = new google.visualization.DataTable();
-    data.addColumn('number', 'X');
-    data.addColumn('number', 'Unleaded');
-    data.addColumn('number', 'Diesel');
 
-    data.addRows([
-        [0, 0, 0],    [1, 10, 5],   [2, 23, 15],  [3, 17, 9],   [4, 18, 10],  [5, 9, 5],
-        [6, 11, 3],   [7, 27, 19],  [8, 40, 40],  [9, 40, 32],  [10, 32, 24], [11, 35, 27],
-        [12, 30, 22], [13, 40, 32], [14, 42, 34], [15, 47, 39], [16, 44, 36], [17, 48, 40],
-        [18, 52, 44], [19, 54, 46], [20, 42, 34], [21, 55, 47], [22, 56, 48], [23, 57, 49],
-        [24, 60, 52], [25, 50, 42], [26, 52, 44], [27, 51, 43], [28, 49, 41], [29, 53, 45],
-        [30, 55, 47], [31, 60, 52], [32, 61, 53], [33, 59, 51], [34, 62, 54], [35, 65, 57],
-        [36, 62, 54], [37, 58, 50], [38, 55, 47], [39, 61, 53], [40, 64, 56], [41, 65, 57],
-        [42, 63, 55], [43, 66, 58], [44, 67, 59], [45, 69, 61], [46, 69, 61], [47, 70, 62],
-        [48, 72, 64], [49, 68, 60], [50, 66, 58], [51, 65, 57], [52, 67, 59], [53, 70, 62],
-        [54, 71, 63], [55, 72, 64], [56, 73, 65], [57, 75, 67], [58, 70, 62], [59, 68, 60],
-        [60, 64, 56], [61, 60, 52], [62, 65, 57], [63, 67, 59], [64, 68, 60], [65, 69, 61],
-        [66, 70, 62], [67, 72, 64], [68, 75, 67], [69, 80, 72]
-    ]);
-
-    var options = {
-        hAxis: {
-            title: 'Time'
-        },
-        vAxis: {
-            title: 'Popularity'
-        },
-        series: {
-            1: {curveType: 'function'}
-        }
-    };
-
-    var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
-    chart.draw(data, options);
-}
 
 
 

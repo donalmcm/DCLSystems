@@ -1,0 +1,1530 @@
+
+
+
+
+
+B.Sc. Computing / Higher Certificate
+
+Second Year Project 
+Semester Four
+
+Documentation for Second Year Project
+
+Dónal McManus 		X00099816
+Ciara Walsh 			X00109322
+Leon Walker O’Brien 	X00126692
+
+
+
+
+
+
+
+
+
+
+
+
+TABLE OF CONTENTS
+
+User Requirements Specification
+SECTION ONE	
+INTERVIEW OF KEY USERS / PROJECT PROPOSER	
+INTERVIEW ONE										3
+INTERVIEW TWO										4
+INTERVIEW THREE										5
+INTERVIEW FOUR										6
+INTERVIEW FIVE										7
+EVALUATE RESULTS										8
+
+SECTION TWO	
+USER REQUIREMENTS CAPTURE FOR PROPOSED SYSTEM	
+SYSTEM NARRATIVE										10
+LIST OF REQUIREMENTS									12
+SECTION THREE	
+USE CASE MODEL	
+USE CASE DIAGRAM 										13
+USE CASE DESCRIPTIONS									14
+SECTION FOUR	
+USE CASE MODEL
+CLASS DIAGRAM										20
+
+
+
+1. Interview of Key Users / Project Proposer
+Interview One
+Question: 	What would you like the system to do at an overview?
+Answer: 	To Manage all of the data from the POS along with the fuel
+Question: 	What are your priorities? 
+Answer: 	For it to be easy to find exactly what I am looking for/ complete the task I am doing with ease 
+Question:	What are your worries/concerns? 
+Answer: 	That if I enter something wrong or click on the wrong place I can’t fix it or undo the mistake  
+Question:	What format would you like your system to be in?
+Answer:	Buttons and tabs that are big and unflustered, no really small information or clickables that are too small
+Question:	How would you like to interact with the system?
+Answer:	Through the Desktop
+Question:	Is there any additional features you would like to incorporate?
+Answer:	A rostering system
+Question:	Would you like to operate a ‘reward card’ system?
+Answer:	yes
+Question:	How would you like to order fuel/stock?
+Answer:	Through the desktop
+Question:	Do we need to know any specific details as to how you operate to help with the operating of the system?
+Answer:	No
+
+Interview Two
+Question: 	What would you like the system to do at an overview?
+Answer: 	Keep track of all our sales, purchases, stock control and profit & loss
+Question: 	What are your priorities? 
+Answer: 	Sales, margin and profit and loss tracking
+Question:	What are your worries/concerns? 
+Answer: 	Stock control, incorrect pricing when we download it into the system from the supplier, which would influence pricing.  
+Question:	What format would you like your system to be in?
+Answer:	A simple tabular form, with easy to read information. Somewhat like excel  
+Question:	How would you like to interact with the system?
+Answer:	PC & mobile
+Question:	Is there any additional features you would like to incorporate?
+Answer:	Integrated online ordering for all products.
+Question:	Would you like to operate a ‘reward card’ system?
+Answer:	Yes
+Question:	How would you like to order fuel/stock?
+Answer:	Online 
+Question:	Do we need to know any specific details as to how you operate to help with the operating of the system?
+Answer:	No
+
+
+
+
+Interview Three
+Question: 	What would you like the system to do at an overview?
+Answer: 	Record of everything that goes through the till/system – every transaction/delivery
+Question: 	What are your priorities? 
+Answer:	Reconciling stock vs transaction (live stock feed)
+Question:	What are your worries/concerns? 
+Answer: 	Pricing was to go wrong, storage(backups), no helpdesk support
+Question:	What format would you like your system to be in?
+Answer:	Formatted excel sheet (managers office), very user friendly(big button, simplistic) that can be broken down i.e. flipcharts. Managers capable of creating reports, margins, percentages etc.
+Question:	How would you like to interact with the system?
+Answer:	Mouse/Keyboard, scanners, touchscreen for tills
+Question:	Is there any additional features you would like to incorporate?
+Answer:	Change prices and item details
+Question:	Would you like to operate a ‘reward card’ system?
+Answer:	Yes, whether that would be with a personal account number, phone number, key card
+Question:	How would you like to order fuel/stock?
+Answer:	Firstly, to see fuel levels, mostly automatic orders with the ability to manually order also.
+Question:	Do we need to know any specific details as to how you operate to help with the operating of the system?
+Answer:	The ability to update products, enable to do end of day procedure, live stock with every transaction.
+Interview Four
+Question: 	What would you like the system to do at an overview?
+Answer: 	To document all transactions and have them on file 
+Question: 	What are your priorities? 
+Answer: 	To have a system which is easy to use, with clear information
+Question:	What are your worries/concerns? 
+Answer: 	That if the system goes down and I can’t get it back up for an extended time, extremely bad for business
+Question:	What format would you like your system to be in?
+Answer:	Again, easy to read in a clear format, with tabs for each of the sections I need
+Question:	How would you like to interact with the system?
+Answer:	Keyboard and Mouse
+Question:	Is there any additional features you would like to incorporate?
+Answer:	An app to order fuel deliveries from home
+Question:	Would you like to operate a ‘reward card’ system?
+Answer:	Yes
+Question:	How would you like to order fuel/stock?
+Answer:	Through the computer in the office and the capability of the app, last resort by phone
+Question:	Do we need to know any specific details as to how you operate to help with the operating of the system?
+Answer:	That there is a day end and it would need to be incorporated into the system
+
+
+ 
+Interview Five
+Question: 	What would you like the system to do at an overview?
+Answer: 	Automatically create customised reports (Daily, Weekly, Monthly, etc.) , keep records of everything all of which will be searchable 
+Question: 	What are your priorities? 
+Answer: 	To have a system that enables me to see very quickly the reports I need and to have concise records that are easy to read
+Question:	What are your worries/concerns? 
+Answer: 	That I can’t use the system to its maximum capability, that there will be no tech support for when things go wrong
+Question:	What format would you like your system to be in?
+Answer:	Something like what Google has, just everything is easy to use with only a hand full of things on the screen at one time 
+Question:	How would you like to interact with the system?
+Answer:	Desktop & mobile
+Question:	Is there any additional features you would like to incorporate?
+Answer:	The ability to see the reports in different styles i.e. pie charts/bar charts
+Question:	Would you like to operate a ‘reward card’ system?
+Answer:	Yes
+Question:	How would you like to order fuel/stock?
+Answer:	Automatically but if not, on the desktop, phone, mobile devices
+Question:	Do we need to know any specific details as to how you operate to help with the operating of the system?
+Answer:	No
+
+
+Evaluation of Results
+
+After conducting our questionnaire involving several managers in forecourt management, we came to the conclusion that the following points are key in developing our project. Our project aims to provide a service that is currently not on the market for management in petrol stations so we also included ideas not provided by the managers. Our personal ideas stem for years working In forecourt with in depth management knowledge.
+Record keeping is a top priority as it is not only essential for driving and understanding sales, but also it is a legal obligation to hold onto records for a certain amount of length. Records will be a large part of our project as it is of high importance to managers and we intend to do lots of data analysis. These will be kept for all aspects, for transactions processed at the POS ( including fuel type, amount, price, time, reward member - yes/no, operator). Fuel levels will be constantly monitored with records of fuel deliveries.
+Live and up to date stock, ‘live’ stock referring to a dynamic database with instant updates corresponding to every transaction. The ability to see exact stock levels and figures are paramount to a manager's system as we have been told. Live stock enables the automatic fuel deliveries for without live records the potential to run out of fuel is there, along with giving the user out of date information. With a huge amount of audits in this area due to the dangers of fuel storage, again we must be able to give managers exact figures to reconcile with  authorities and management.
+Usability is key as we want this system to make the managers feel enabled by it rather than making it feel like a daunting piece of software which some of managers have described about their current system. This is mind we would like as little training in the system so that new users can pick it up at speed which of course is desirable by managers. Our aim is to make the graphical user interface (GUI) quite simplistic with the complexity ‘behind the scenes’. As told by managers this area is vital due to the age difference in the field, which in a lot of cases is linked with a lack of experience using modern technology systems. We hope to be able to cater to all users abilities. 
+
+
+Robustness is another essential part to any management system, in this case it is of utmost importance for the system to be able to withstand all forms of faults. Error catching will be implemented heavily throughout this system for we cannot allow it to crash, for as explained by managers it would lead to a devastating aftereffects. With this in mind we will ensure each section has catches with appropriate error messages displayed to the user with no outstanding error. Also with the ability of possible backups so in the case of an unforeseen physical event to the hardware there are backups.
+Consistency is something we will focus on throughout this system, this is for both functionality and aesthetics. Consistency in relation to functionality is so the user feels comfortable in all different sections of the application given the sense of familiarity with the colour scheme and page layout including the format of the information. As this is where the managers will spend the majority of their working day, it is essential that the system is appealing to work with and is friendly on the eye with an appropriate colour scheme which potentially the user can choose between a range of ones that fit the criteria (allowing optimal visibility on all information). The colour coding will work consistently throughout the different tabs.
+Security is of paramount, there will be a list of manager accounts on the system who will be able to login in with the username and password if entered correctly. If either of these is entered incorrectly an appropriate message will be displayed. The possibility of having the password section hidden behind asterisks and the ability to also show it in plain text if required. Once in, the manager could enter new users with their password for an assistant manager for example, along with the capability to edit and delete any users.
+The ability to create custom reports and queries is something that is missing in this field from the answered we have received. With our systems potential to create completely customisable reports for managers it will enable them in a way not possible before. By having a database linked together flawlessly we can cross reference data and combine it in the exact way needed. All with the means to fine tune to a specific range of dates and potentially times.
+Automated ‘end of day procedure’ is again an essential part of the programme for there needs to be an exact close of the day mainly for financial reasons. After gathering answers there was an unanimous time at which this takes place, eleven pm. At this time the afternoon shifts finish up and the day is closed closing all reports and figures for that day. The night shift then starts and that will count as the first shift of the day and the day will begin.
+2.User Requirements Capture for Proposed System
+System Narrative
+Once opened the user will be greeted by a login Screen. It will require the username and password of the user which is already stored in the database. Once the user has entered both the correct username and password the program will then progress, if either of the entries is wrong there will be an appropriate error message to the user. Once the user has been authenticated and has advanced into the next stage there will be a home hub for the manager. It will have several tabs, including for fuel, for information on reward members, for figures in the form of reports and graphs and finally one for the roster. 
+The system will have a format about its design which will resonate throughout the entire system ensuring the user doesn’t feel lost. One way we will integrate consistency across the program is we will have a column which will display the user who is currently logged in, the current date, the time, the version of the software and the section of which they are in. 
+Tabs will be in a row format just below the top of the page. The Fuel tab will have two main elements to it. There will be a view that shows you the level of your stock in each tank and what type of fuel whether it is petrol or diesel. Working off this section is the automatic fuel order. Once a tanks fuel level drops below one thousand litres there will be an automatic order to refill that tank. Along with the fuel levels there is a section for fuel prices where the user has the capability to enter in new fuel prices.
+Reward Members are an important part to managers business, therefor we have an aspect dedicated to them. In this section there will be stored information such as, Name, Phone Number, Address, Member number and current points. Phone number will be used to send promotional texts, with current fuel prices and more. Address is being stored for sending out vouchers to a customer’s address. One point will be rewarded every time a reward member spends a euro in store. At the end of every day all customers who have five hundred points will be sent out a voucher for €5. This can be modified if the customer wishes. 
+
+
+
+Under the Reports tab there will be several options, each of which represent a type of report that can be produced by the manager. Each report will have many search criteria that the user will select from to create the report that is desired. After selecting the financial report type, then the user will select the time frame from which the information is outputted from, in this sub section the manager will have reports premade for him such as a day end report and will be able to create his own. If the user has clicked into the graph sub section of the reports, the charts will be able to display the percentages and figures of all aspects of the business. 
+Rostering is an inevitable part of management, we integrated an excel worksheet into the page to allow Managers to keep track of their employees, their weekly hours, the breaks they are owed, and the sum of all hours used. The blank roster allows the manager the flexibility to choose the hours they require week to week. After the roster has been populated it can be printed off, the user then clicks submit the Monday after the working week to ensure there has been no changes that haven’t been updated on the roster, which will save the roster in a pdf format which will be then stored to look back on at any time. 
+Finally after the manager has completed his days’ work he then has the option to log off which once done will bring the system back to the login screen from which the user started.
+
+
+
+
+
+
+
+
+
+
+
+
+
+List of Requirements
+* Login screen with username and password requirements
+* Tabular design with an easy layout for each section
+* A column which will be static across the pages, which will display time, date, version of the software and the user
+* Fuel heading with subsections
+* For displaying exact figures reading the fuel tanks
+* For manually ordering fuel
+* To Set prices
+* Reward Members table displaying relevant information for each member
+* Report section
+* Enables flexibility in regards to selecting time period
+* Has the capability of choosing a type of report
+* Pie chart
+* Bar chart
+* Line graph
+* Cartesian graph
+* Automated Reports 
+* Rostering
+* To enter times according to how the user sees fit
+* Have a total of employee hours, breaks and an overall total
+* Save function 
+* Print function 
+* Log out service
+
+3. Use Case Model
+Use Case Diagram
+
+
+
+
+
+
+
+
+
+
+
+
+Purchase Fuel Use Case Description
+Use Case:Purchase FuelActor(s):ManagerGoal:To successfully replenish the stock of fuel.Overview:
+
+
+Manager checks the level of each fuel type. If stock levels are low, He can click a button that will automatically order the amount needed to replenish stock. If stock goes below a certain amount and is nearly gone, the system automatically orders stock and the manager can review this transaction later.Pre-
+Condition:Fuel stock levels are low.Post-
+Condition:Fuel stock levels are full and ready for future transactions.Successful
+Scenario:
+
+
+
+
+
+* Manager checks stock levels of petrol and diesel.
+* Stock levels seem to be low on both.
+* Manager clicks the order stock button.
+* Sufficient amounts are ordered of each type of fuel to replenish stock.
+* Payment is then made automatically.Alternative
+Scenario(s):
+
+
+* Stock goes below a certain level on diesel.
+* An order is automatically sent out.
+* Payment is also made automatically.
+* Manager then reviews the transaction at a later time.
+Set Fuel Prices Use Case Description
+
+Use Case:Set Fuel PricesActor(s):ManagerGoal:To successfully set the fuel prices for the current day.Overview:
+
+Manager checks the prices of all fuel stations in the area. Manager will set the price to same amount as the lowest priced local competing station to ensure the most customers possible. Pre-
+Condition:Fuel prices are not set for the current day.Post-
+Condition:Fuel prices are set for the current day and ready for customers.Successful
+Scenario:
+
+
+
+
+
+* Manager checks local prices on fuel.
+* He also looks for the lowest priced station.
+* Clicks the set price option on the system.
+* Enters in the same price as the lowest competing station or lower if possible.
+* Attracts as much customers as possible.Alternative
+Scenario(s):
+
+
+
+
+* Manager checks local prices on fuel.
+* Looks for the lowest priced station.
+* Prices are the same as the day before.
+* No change is made to the prices.
+Reward Members Use Case Description
+
+Use Case:Reward MemberActor(s):ManagerGoal:
+To successfully Reward a member with discounts that relate to their transactions.Overview:
+
+
+Manager Checks the transactions of all the members in the last 24 hours. He will then give them points on their card relating to how much they’ve spent in their transaction. For every 1-euro, you get 1 point. These points can then be used as a discount in a later transaction.Pre-
+Condition:Rewards are not given.Post-
+Condition:Rewards are given and ready for use.Successful
+Scenario:
+
+
+
+
+* Manager checks all member transactions for the last 24 hours.
+* There have been many transactions by members.
+* The total number of euro is then transferred into point.
+* It is then added to the card.
+* Members can now use their discount.Alternative
+Scenario(s):
+
+
+
+* Manager checks all member transactions for the last 24 hours.
+* No members have used their cards in the last 24 hours.
+* No changes are made.
+Create Graphs Use Case Description
+
+Use Case:Create GraphsActor(s):ManagerGoal:
+To successfully Construct Different sorts of charts with transaction information.Overview:
+
+
+
+Manager Clicks on the graph section. They will able to click a button and create charts and see how much of each type of fuel was bought today, the last seven days and the last thirty days. They will be able to see this in multiple different chart forms such as bar charts, pie charts and scatter plot charts. They will also be able to see the stock levels of each fuel represented with a chart.Pre-
+Condition:Charts are not made.Post-
+Condition:Charts are made for all time periods and are ready to be analysed.Successful
+Scenario:
+
+
+
+* Manager clicks on graph section
+* He wants to see the fuel being bought the past seven days.
+* He clicks the last seven days option.
+* Charts are generated for each type of fuel.
+* He can then choose which graph type he wants to review.Alternative
+Scenario(s):
+* Manager clicks on graph section
+* He wants to see the stock level of fuel.
+* He clicks the option that allows you to see it in chart form.
+* It appears that stock levels are running low.
+* Manager now has to purchase fuel.
+Issue Report Use Case Description
+
+Use Case:Issue ReportActor(s):ManagerGoal:To successfully issue financial numerical reports of data received.Overview:
+
+
+Manager Click the issue reports option. It will have options of the time period such as today, the last seven days and the last thirty days. The manager selects one of these and then a financial report is then created of the time period they selected.Pre-
+Condition:Reports are not issued.Post-
+Condition:Reports are issued and ready to be reviewed.Successful
+Scenario:
+
+
+
+
+* Manager clicks on reports section
+* He wants to see the financial report of the last seven days.
+* He clicks the last seven days option.
+* Report is generated for that time period.
+* He can then see the information that he wants to know.Alternative
+Scenario(s):
+* Manager clicks on reports section
+* He wants to see the financial report of the last thirty days.
+* He clicks the last thirty days option.
+* Report is generated for that time period.
+* He can then see the information that he wants to know.
+
+      Populate Roster Use Case Description
+Use Case:Populate RosterActor(s):ManagerGoal:To successfully populate the roster of people who are going to be working on certain days.Overview:
+
+
+Manager Clicks the populate roster option. There will be a list of employees with blank sections beside them allocated for each day. The manager can then put the start time and finishing time in a box on the day they want a certain employee to work and then submits it into the system. They can also check previous weeks and see previous rosters.Pre-
+Condition:Roster is not populated.Post-
+Condition:Roster is populated and employees know their time slots.Successful
+Scenario:
+
+
+
+
+
+* Manager clicks the populate roster option.
+* A list of all employees comes up with a section for each day of the week beside them.
+* Manager inserts start times and finishing times into the allocated slots.
+* Timetable is submitted and saved for future reference.
+* Timetable is printed off.
+* Employees are notified.Alternative
+Scenario(s):
+
+
+* Manager wants to see a previous timetable from a number of weeks back.
+* He simply clicks an arrow and it brings him back week by week until he reaches the specific page.
+* Analyses the information and finds what he needs.
+4. Class Model
+Class Diagram
+
+
+
+TABLE OF CONTENTS
+
+Design  Specification
+SECTION ONE	
+SCREEN DESIGN	
+LOGIN SCREEN											22
+FUEL LEVELS											23
+FUEL ORDERING										25
+SET FUEL PRICE										26
+ROSTER											27
+REPORT											28
+GRAPH												29
+REWARD MEMBERS										30
+SECTION TWO	
+DATABASE DESIGN	
+ENTITY RELATIONSHIP DIAGRAM								31
+TABLE/RECORD LAYOUT									32
+COLUMN DATA TYPES										34
+PRIMARY KEYS/FOREIGN KEYS								36
+SECTION THREE	
+PROGRAM DESIGN	
+PSEUDOCODE 											38
+SECTION FOUR	
+TEST DESIGN
+TEST CASE MATRIX										46
+
+1. Screen Design
+Login Screen
+
+
+1. This is where there will be an image of the company logo.
+
+2. An entry box for the user to enter their username/number
+
+3. Another entry column for the user to enter the password assigned to their account.
+
+4. A submit button is clicked when both username and password are entered.
+
+5. This section only appears when an invalid entry is entered in either the username, password or both. 
+
+
+
+
+
+
+
+
+Fuel Levels
+
+
+
+
+This is the screen first displayed when the user progresses from the login screen.
+
+1. In the top left hand corner, there is a display which shows the date and time, this section will be consistent throughout the system.
+
+2. This is an area which is meant for sub sections, for example fuel has three sections stock levels, ordering and pricing once you are in a section the appropriate column will be highlighted.
+
+3. A small footer will be on the system showing copyright and the current version of the software you are running. The footer will be consistent throughout the system.
+
+4. A banner across the top will be an area used for displaying the company logo and name. This feature will be consistent throughout.
+
+5. Along this row is each tab in the form of a navigation bar. Each of which opens at the bottom to indicate you are on a particular section, this is a consistent feature.
+
+
+6. Here there will be placed information and an image relating to each tank of fuel.
+
+7. The log out button will be placed here, this will be consistent throughout the system. Once pressed it will bring you back to the login screen.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Fuel Ordering
+
+
+1. Displayed in these sections is the current amount of litres of each type of fuel.
+
+2. On the same row corresponding to the fuel type you will enter the amount of fuel which you can order.
+
+3. Invalid order messages will only appear if the amount ordered plus the current amount is over the tanks limits, also if an invalid entry is entered i.e  a minus amount or text.
+
+4. The submit button is used to submit the order amount that the user has entered into the above fields. 
+
+5. This message will appear once a successful order has gone through.
+
+	
+
+
+
+Set Fuel Prices
+
+
+1. Here will be displayed the current prices for both petrol and diesel.
+
+2. Directly across from the current prices will be an entry row for both fuel types to update them.
+
+3. These messages are independent of each other and will only display if the user tries to submit an invalid entry for example a word or a negative value.
+
+4. This button is used to submit the new values entered for the fuel prices.
+
+5. This will appear when the fuel prices have been successfully updated.
+
+
+
+
+
+
+
+Roster
+
+
+1. This section is allocated for displaying the current week for the roster being displayed, but also the ability to go backwards and forwards in weekly periods to check rosters.
+
+2. Here we will have an embedded excel file which displays the roster, with the first left column filled with employee names and the top row filled with each day of the week. It will display the total of hours worked for each employee and the total of breaks they are owed in hours. It will also show an overall total of hours used for the week.
+
+3. Our print button will print the roster that is currently being displayed. 
+
+4. Submit will save the file into a pdf file so that it cannot be altered with.
+
+5. This will be displayed as confirmation that the roster has been submitted.
+
+
+
+
+
+
+
+Reports
+
+
+1. The reports tab is mainly aimed at producing reports with financial figures.
+
+2. Here there will be entered the search criteria for example dates, fuel types, amounts.
+
+3. The report will be displayed here with the rows of the queried data. 
+
+4. This will print the current report being displayed.
+
+
+
+
+
+
+
+
+
+Graphs
+
+
+1. In this subsection of reports there is again a sub division of graphs with the option of a Line Chart, Bar Chart and a Pie Chart. Once clicked into it will like Its header be highlighted.
+
+2. Just like its sibling heading, in this section the user enters data to target the type of graph they wish to produce.
+
+3. In this area, the graph will be produced from the criteria the user entered in section two. The appropriate graph will be created depending on the sub section the user is in.
+
+4. The print button will print the graph being displayed.
+
+
+
+
+
+
+
+
+Reward Members
+
+
+1. This table will be populated with Reward members and their information, their reward number, name, address, contact number and their current points.
+
+2. This button will allow the user to reward the members in the database. If users have 500 points they will earn €5, if they have 1000 points they will earn €10 this will scale. It will be up to the user to reward his members as often as they sees fit.
+
+3. This will appear once the user has rewarded their members as a confirmation pop up.
+
+
+
+
+
+
+
+
+
+2. DATABASE DESIGN
+
+Entity Relationship Diagram:
+
+
+
+
+
+Table / Record Layouts:
+ManagerID(PK)FuelID(FK)usernamePassword12341Manager1ManagerPasswordManager
+OrderID(PK)ManagerID(FK)pricedatetypeAmount1011234400.0001/01/2017Diesel1001021234500.0003/01/2017Petrol125Order
+
+FuelID(PK)typeAmount1Petrol4302Diesel450FuelStock
+
+ID(PK)ManagerID(FK)datetypePrice1123401/04/2017Petrol1.252123401/04/2017Diesel1.323123402/04/2017Petrol1.264123402/04/2017Diesel1.30FuelPrice
+RosterID(PK)ManagerID(FK)fnamelnamedatetime slot10011234JohnO’Brien25/03/201709.00-17.0010021234DeanScott25/03/201717.00-21.00WeekRoster
+
+RewardID(PK)CardNo(FK)DateAmount5015678901/03/2017105024567305/03/201723Reward
+
+cardNo(PK)fnamelnameaddresscontactNumberPoints56789KennethGilroy123 street085 123 455610545673AmyJimbo345 ave086 456 789184MemberCard
+
+
+
+
+
+
+
+
+Column data types:
+ManagerID(PK)
+-numberFuelID(FK) 
+-numberUsername
+- VARCHARPassword
+- VARCHARManager
+
+OrderID(PK)
+ - numberManagerID(FK) - numberprice
+ -decimalDate 
+- dateType
+- VARCHARamount 
+- decimalOrder
+
+FuelID(PK)
+-numbertype
+- VARCHARAmount
+-decimalFuelStock
+
+ID(PK)
+-VARCHARManagerID(FK)
+-VARCHARdate
+-datetype
+-VARCHARPrice
+-decimalFuelPrice
+
+RosterID(PK)
+-numberManagerID(FK)
+-numberfname
+-VARCHARlname
+-VARCHARdate
+-datetime slot
+-VARCHARWeekRoster
+RewardID(PK)
+-numberCardNo(FK)
+-numberdate
+-dateAmount
+-decimalReward
+
+cardNo(PK)
+-numberFname
+-VARCHARLname
+-VARCHARaddress 
+-VARCHARcontactNumber
+-numberPoints
+-numberMemberCard
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Primary Keys/Foreign Keys:
+ManagerID(PK)FuelID(FK) 
+
+Manager
+OrderID(PK)ManagerID(FK)
+
+Order
+FuelID(PK)  
+
+FuelStock
+ID(PK)ManagerID(FK)
+
+FuelPrice
+RosterID(PK)ManagerID(FK)
+
+WeekRoster
+RewardID(PK)CardNo(FK)
+
+Reward
+cardNo(PK)
+
+MemberCard
+
+
+Notes:
+* The FuelPrice table is for storing the fuel prices the shop sets each day.
+* The FuelStock table is for monitoring stock levels and will be used to see if fuel is needed to be purchased.
+* The two tables look related but are for two different purposes.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3. Program Design
+Pseudocode
+Login
+Variables:
+username : String = “username@gmail.com”;
+password : String = “password”;
+usernameIn : String;
+passwrodIn : String;
+Begin
+1. User enters usernameIn and passwordIn into the system.
+2. If (usernameIn = username and passwordIn = password)
+The user gets logged into the system;
+3. Else if(usernameIn != username or passwordIn != password)
+Display(“Invalid username or password, please try again”);
+4. User will re-enter usernameIn and passwordIn;
+End.
+
+
+
+
+
+
+
+
+Fuel Order
+Variables:
+dieselAmount : Double;
+petrolAmount : Double;
+dieselOrder : Double;
+petrolOrder : Double;
+MAX_PETROL : FINAL DOUBLE;
+MAX_DIESEL : FINAL DOUBLE;
+Begin
+1. User checks values for disealAmount and petrolAmount.
+2. User enters a value for dieselOrder.
+3. If((dieselAmount + dieselOrder) < MAX_DIESEL)
+Display(“Order is submitted”);
+4. If((dieselAmount + dieselOrder) >= MAX_DIESEL)
+Display(“Order is over limit, please re-enter correct amount”);
+5. User will re-enter correct value for disealOrder.
+6. User enters a value for petrolOrder.
+7. If((petrolAmount + petrolOrder) < MAX_PETROL)
+Display(“Order is submitted”);
+8. If((petrolAmount + petrolOrder) >= MAX_PETROL)
+Display(“Order is over limit, please re-enter correct amount”);
+9. User will re-enter correct value for petrolOrder.
+End.
+
+Set Fuel Price
+Variables:
+currentPetrolPrice : Double;
+currentDieselPrice : Double;
+newPetrolPrice : Double;
+newDieselPrice : Double;
+MIN_PRICE : FINAL DOUBLE =0;
+Begin
+1. User checks values for currentPetrolPrice and currentDieselPrice;
+2. User enters a value for newPetrolPrice.
+3. If(newPetrolPrice <= MIN_PRICE)
+Display(“Incorrect value entered, please try again”);
+4. User will re-enter correct value for newPetrolPrice.
+5. If(newPetrolPrice > MIN_PRICE)
+Display(“Prices have been updated”);
+6. User enters a value for newDieselPrice.
+7. If(newDieselPrice <= MIN_PRICE)
+Display(“Incorrect value entered, please try again”);
+8. If(newDieselPrice > MIN_PRICE)
+Display(“Prices have been updated”); 
+9. User will re-enter correct value for newDieselPrice.
+End.
+
+
+Roster
+Variables:
+MAX_HOURS = 40;
+MAX_DAYS = 5;
+weekNumber : Int;
+hoursWorked : Int;
+daysWorked : Int;
+employee : Int;
+hoursEntered : Int;
+daysEntered : Int;
+TOTAL_EMPLOYEES : FINAL INT = 5;
+Begin
+1. User will enter weekNumber for the roster he wishes to create.
+2. User will enter which number of employee to add hours for
+3. If(employee == 1)
+User will enter hoursEntered and daysEntered
+While(hoursEntered < MAX_HOURS && daysEntered < MAX_DAYS)
+	hoursWorked += hoursEntered;
+daysWorked+= daysEntered;
+4. If(employee == 2)
+User will enter hoursEntered and daysEntered
+While(hoursEntered < MAX_HOURS && daysEntered < MAX_DAYS)
+	hoursWorked += hoursEntered;
+daysWorked+= daysEntered;
+5. If(employee == 3)
+User will enter hoursEntered and daysEntered
+While(hoursEntered < MAX_HOURS && daysEntered < MAX_DAYS)
+	hoursWorked += hoursEntered;
+daysWorked+= daysEntered;
+6. If(employee == 4)
+User will enter hoursEntered and daysEntered
+While(hoursEntered < MAX_HOURS && daysEntered < MAX_DAYS)
+	hoursWorked += hoursEntered;
+daysWorked+= daysEntered;
+
+7. If(employee == 5)
+User will enter hoursEntered and daysEntered
+While(hoursEntered < MAX_HOURS && daysEntered < MAX_DAYS)
+	hoursWorked += hoursEntered;
+daysWorked+= daysEntered;
+8. If(employee > TOTOAL_EMPLOYEES)
+Display(“Invalid entry, please try again”);
+9. User will re-enter number of employee.
+10. Display(“Roster has been submitted”);
+End.
+
+
+
+Reports
+ Variables:
+dateSelected : Int;
+petrolAmount : Double;
+dieselAmount : Double;
+pumpNumber : Int;
+Begin
+1. User will enter dateSelected to create a report for that date.
+2. Display(dateSelected + pumpNumber + petrolAmount + “in litres” and dieselAmount + “in litres”);
+3. User will submit and print report.
+End.
+
+
+
+
+
+
+
+
+
+
+
+
+
+Graphs
+Variables:
+graphChoice : Int;
+weekNumber : Int;
+petrolSold : Double;
+dieselSold : Double;
+pumpNumber : Int;
+Begin
+1. User selects which type of graph he wishes to create.
+2. If(graphChoice ==1)
+User selects a line graph
+3. If (graphChoice == 2)
+User selects a bar chart
+4. If(graphChoice == 3)
+User selects a pie chart
+5. The user then must specify which weekNumber he wants the data queried for.
+6. Graph will be generated displaying petrolSold, dieselSold and pumpNumber;
+End.
+
+
+
+
+
+      
+Reward Members
+Variables:
+FIVE_HUNDRED : FINAL INT = 500;
+ONE_THOUSAND : FINAL INT = 1000;
+FIFTEEN_HUNDRED : FINAL INT = 1500;
+TWO_THOUSAND = FINAL INT = 2000;
+numberOfPoints : Int;
+reward : Double;
+
+Begin
+1. The user selects reward members.
+2. If(numberOfPoints < FIVE_HUNDRED)
+reward = 0.00;
+3. Else if(numberOfPoints >= FIVE_HUNDRED && numberOfPoints < ONE_THOUSAND)
+reward = 5.00;
+numberOfPoints = numberOfPoints – FIVE_HUNDRED;
+4. Else if(numberOfPoints >= ONE_THOUSAND && numberOfPoints < FIFTEEN_HUNDRED)
+reward = 10.00;
+numberOfPoints = numberOfPoints – ONE_THOUSAND;
+5. Else if(numberOfPoints >= FIFTEEN_HUNDRED && numberOfPoints < TWO_THOUSAND)
+reward = 15.00;
+numberOfPoints = numberOfPoints – FIFTEEN_HUNDRED
+6. Else if(numberOfPoints >= TWO_THOUSAND)
+reward = 20.00;
+numberOfPoints = numberOfPoints – TWO_THOUSAND;
+7. Display (“Members have been successfully rewarded”);
+End.
+
+
+
+
+4.Test Design
+
+Test Case MatrixTest Case NoTest Case NameInputExpected OutcomeActual OutcomeResult (Pass/Fail)1Login Valid Username and valid Password enteredProgress to Fuel Stock Levels2LoginValid Username and Invalid password enteredInvalid login error message displayed3LoginInvalid Username and valid password enteredInvalid login error message displayed4LoginInvalid Username and invalid password enteredInvalid login error message displayed5Fuel OrderingValid Diesel amount entered and valid Petrol amount enteredOrder has been submitted message will display, amounts will be updated6Fuel OrderingValid Diesel amount entered but invalid petrol amount enteredInvalid order amount message will display under the petrol order7Fuel OrderingInvalid diesel amount entered but valid petrol amount enteredInvalid order amount message will display under the diesel order8Fuel Ordering Invalid diesel amount entered and invalid petrol amount enteredInvalid order amount message will display under both orders9Fuel PricingValid price entered for diesel and valid price entered for PetrolPrices have been updated message will appear, prices will be updated10Fuel PricingValid price entered for diesel and invalid price entered for PetrolInvalid entry message will appear under the petrol entry11Fuel PricingInvalid price entered for diesel and valid price entered for PetrolInvalid entry message will appear under the diesel entry12Fuel PricingInvalid price entered for both diesel and petrolInvalid entry message will appear under both petrol and diesel entries13RosterPopulate Roster with shiftsRoster has been submitted, will be saved for future reviewing14ReportsEnter search criteria Report will be generated and will be displayed with the columns specified15GraphsIn Line Chart - Enter search criteriaLine Chart will be generated and will be displayed with correct Information16GraphsIn Bar Chart - Enter search criteriaBar Chart will be generated and will display with correct Information17GraphsIn Pie Chart - Enter search criteriaPie Chart will be generated and will be displayed with correct Information
+
+
+
+
+
+
+
+
+
+
+
+
+TABLE OF CONTENTS
+
+User Manual 
+SECTION ONE	
+LOG IN
+LOG IN	PAGE											51
+LOG OUT 											52
+PROFILES											52
+SECTION TWO	
+FUEL	
+FUEL LEVELS PAGE										53
+ORDER FUEL PAGE										55
+SET FUEL PRICES PAGE									56
+SECTION THREE	
+REPORTS	
+REPORTS	 										57
+BAR CHART											59
+PIE CHART											59
+LINE CHART											60
+SECTION FOUR	
+ROSTER											61
+
+SECTION FIVE	
+REWARD MEMBERS										62
+
+
+
+
+User Manual
+1. Log in page
+
+Valid usernames and passwords:
+1. Email: ciara@gmail.com Password: password
+2. Email: donal@gmail.com Password: password
+3. Email: leon@gmail.com Password: password
+
+* Enter valid your email address
+
+* Enter your password
+       
+* Press the ‘Sign in’ button to sign in
+
+* If an incorrect password or email is entered an error message will appear
+       
+
+
+
+
+
+Log Out
+
+* To log out at any stage click the top right drop down and select the log out option which will bring you back to the log in page.
+Profile
+
+* To view the current users profile click the top right drop down and select the option with your name on it, example Ciara Walsh. This will bring you to the following profile page.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2. Fuel Level Page
+
+* To access the fuel level page select the fuel level option under the fuel section in the navigation bar.
+* The top two blocks display the total volume of unleaded and diesel fuel that the tanks are currently holding.
+* If you click on the diesel block it will bring you to all the diesel sales of the year under the reports section.
+
+
+* If you click on the unleaded block it will bring you to all the diesel sales of the year under the reports section.
+
+
+* Below the two blocks are displays of each fuel tanks and information from the datebase relating to that tank
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Order Fuel Page
+
+* To access the order fuel page select the order fuel option under the fuel section in the navigation bar.
+* The current amounts for each tank are displayed. 
+* To order fuel select which tank you wish to order fuel for by clicking the order fuel button.
+
+* You will then be brought to the order amount page.
+* Add the amount you wish to order under the amount section then click the create order
+
+
+
+
+
+
+Set Fuel Price Page
+
+* To access the set fuel price page select the set fuel price option under the fuel section in the navigation bar.
+* The current prices for both unleaded and diesel are displayed.
+* Choose which you wish to update, either diesel or unleaded, and select the update price button located underneath the current value.
+
+* You will then be brought to the new fuel prices page.
+* Enter the amount you wish to set the new price to and click the update fuel price button.
+
+* The system will bring you back to the set fuel prices page with the new amount displayed.
+
+
+
+3. Reports
+
+* To access the reports page select the reports option under the reports section in the navigation bar.
+* To view all sales, both unleaded and diesel, of the full year of 2016 select the all sales button.
+
+* To view all diesel sales from 2016 click the diesel sales button.
+
+
+
+
+
+
+
+
+
+
+
+
+
+* All of the diesel sales will be displayed as follows:
+
+
+* To view all unleaded sales from 2016 click the unleaded sales button.
+
+* All of the unleaded sales will be displayed as follows:
+
+
+
+
+
+
+
+
+Bar Chart
+
+* To access the bar chart page click the reports section on the navigation bar and select the bar chart heading located under reports.
+* This bar chart illustrates a visual representation of the net sales of each month both diesel and unleaded.
+
+Pie Chart
+
+
+* To access the pie chart page click the reports section on the navigation bar and select the pie chart heading located under reports.
+* This pie chart illustrates a visual representation of the percentage sales of diesel and unleaded.
+
+
+
+
+
+
+
+
+
+Line Chart
+
+* To access the line chart page click the reports section on the navigation bar and select the line chart heading located under reports.
+* This line chart illustrates a visual representation of the sales of diesel and unleaded for each week.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+4. Roster
+
+
+* To access the roster page click the roster option on the navigation bar.
+* The roster section is a bedded excel sheet with empty cells which you can fill in for employees hours for upcoming weeks. As it is an excel sheet it includes a print feature as well as a save option.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+5. Reward Members
+
+* To access the reward members page click the reward member section on the navigation on.
+* This page displays all information of each member from the database.
+* On this page you can remove a member by clicking the red button under the remove heading beside the member you wish you delete.
+
+* You can also edit a reward members information by clicking the red edit button under the edit heading beside the member you wish to edit.
+
+* This will bring you to a form where you can edit the number of points a reward member has.
+
+* Enter the new information you wish to add to the member and click the add info button.
+
+* The system will return you to the reward members page with the new updated information.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      TABLE OF CONTENTS
+
+Testing
+SECTION ONE	
+LOG IN	
+INVALID USERNAME AND PASSWORD							65
+INVALID USERNAME AND VALID PASSWORD							65
+VALID USERNAME AND INVALID PASSWORD							65
+VALID USERNAME AND VALID PASSWORD							66
+
+SECTION TWO
+FUEL
+ORDER FUEL											67
+SET FUEL PRICE										68
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1.Log In
+* Invalid username and password
+
+* Invalid username and valid password
+
+* Valid username and valid password
+
+
+
+
+
+* Valid username and valid password
+
+
+
+
+
+
+
+
+
+
+
+
+
+2.Fuel
+* Invalid Entry for Order Fuel
+
+* Valid Entry for Order Fuel
+
+
+
+
+
+
+
+
+* Invalid Entry for Diesel Set Fuel Price
+
+* Valid Entry for Diesel Set Fuel Price
+
+
+* Invalid Entry for Unleaded Set Fuel Price
+
+
+
+
+
+* Valid Entry for Unleaded Set Fuel Price
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+TABLE OF CONTENTS
+
+Management of Project
+SECTION ONE	
+MINUTES	
+MINUTES ONE											71
+MINUTES TWO											72
+MINUTES THREE										73
+MINUTES FOUR										74
+MINUTES FIVE											75
+MINUTES SIX											76
+MINUTES SEVEN										77
+PROJECT SCHEDULE										78
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Minutes One
+January 27, 2017
+I. Call to order
+John Byrnes called to order the regular meeting of the 2nd Year Project Group 8 at 3:30pm on January 27, 2017 at Room 233.
+II. Roll call
+Dónal McManus conducted a roll call. The following persons were present: John Byrne, Ciara Walsh and Leon Walker O’Brien.
+III. Approval of minutes from last meeting
+This was the first meeting.
+IV. Open issues
+a) How much do we include the customer?
+b) How big is our scope, how many levels of the system is there?
+c) Where is our focus or do we split of focus on several topics?
+V. New Progress
+a) Potential Use Cases; Purchase Fuel, Set Prices, Reward Members, Database that can create live graphs, reports
+b) Focusing mainly on the Data Analysis, potentially excluding the Employee section.
+c) To use our code on GitHub, also using Google Drive for file sharing.
+VI. Adjournment
+John Byrnes adjourned the meeting at 4:00pm.
+Minutes submitted by:  Dónal McManus	
+Minutes approved by:  Ciara Walsh
+
+
+
+
+
+
+Minutes Two
+February 6, 2017
+VII. Call to order
+Our group called to order the regular meeting of the 2nd Year Project Group 8 at 2:20pm on February 6, 2017 at Room 140.
+VIII. Roll call
+Dónal McManus conducted a roll call. The following persons were present: Ciara Walsh and Leon Walker O’Brien
+IX. Approval of minutes from last meeting
+Dónal read the minutes from the last meeting. The minutes were approved as read.
+X. Open issues
+d) Preparing a questionnaire, conducting it and evaluating the results.
+e) Creating a system narrative along with a list of requirements.
+f) A use case model – Use case diagram & use case descriptions, along with a class diagram.
+g) How to evenly divide the work ensuring everyone has a fair work load.
+XI. New business
+d) Dónal will take on the questionnaire, evaluating results, system narrative and list of requirements.
+e) Ciara along with helping with the questionnaire will build the use case diagram and will create the class diagram with Leon.
+f) Leon will take on each of the use case descriptions, being involved with the creating of the system narrative and will work alongside Ciara for the class diagram.
+XII. Adjournment
+Our group adjourned the meeting at 2:30pm
+Minutes submitted by:  Dónal
+Minutes approved by:  Leon
+
+
+
+Meeting Three
+February 10, 2017
+XIII. Call to order
+John Byrnes called to order the regular meeting of the 2nd Year Project Group 8 at 3:00pm on February 10, 2017 at Room 233.
+XIV. Roll call
+Dónal McManus conducted a roll call. The following persons were present: John Byrne, Ciara Walsh and Leon Walker O’Brien.
+XV. Approval of minutes from last meeting
+Dónal read the minutes from the last meeting. The minutes were approved as read.
+XVI. Open issues
+h) How to divide the work evenly for the design specification stage?
+i) To arrange a meeting with John Byrnes 
+XVII. New Progress
+g) Dónal with focus on the screen design, Leon will focus on the Database Design with assistance from Dónal. Ciara will focus on the Program Design and the Test Design. All members will link in with each other to collaborate to ensure uniformity. 
+h) Shortly after are meeting John emailed us with a meeting time.
+XVIII. Adjournment
+John Byrnes adjourned the meeting at 4:00pm.
+Minutes submitted by:  Dónal McManus	
+Minutes approved by:  Ciara Walsh
+
+
+
+
+
+
+
+
+Meeting Four
+February 17, 2017
+XIX. Call to order
+John Byrnes called to order the regular meeting of the 2nd Year Project Group 8 at 3:00pm on February 17, 2017 at Room 233.
+XX. Roll call
+Dónal McManus conducted a roll call. The following persons were present: John Byrne, Ciara Walsh and Leon Walker O’Brien.
+XXI. Approval of minutes from last meeting
+Dónal read the minutes from the last meeting. The minutes were approved as read.
+XXII. Open issues
+j) Not having a database of Transactions
+k) To clarify what is expected from each section
+XXIII. New Progress
+i) Dónal has emailed his manager who has contacted people in charge of the data waiting for a reply. Ciara has also contacted her manager and requested a database again, waiting for a reply.
+j) John walked the team through each section clarifying the specifics of the requirements.
+XXIV. Adjournment
+John Byrnes adjourned the meeting at 4:00pm.
+Minutes submitted by:  Dónal McManus	
+Minutes approved by:  Ciara Walsh
+
+
+
+
+
+
+
+					  Minutes Five
+February 24, 2017
+XXV. Call to order
+John Byrnes called to order the regular meeting of the 2nd Year Project Group 8 at 3:00pm on February 24, 2017 at Room 233.
+XXVI. Roll call
+Dónal McManus conducted a roll call. The following persons were present: John Byrne, Ciara Walsh and Leon Walker O’Brien.
+XXVII. Approval of minutes from last meeting
+Dónal read the minutes from the last meeting. The minutes were approved as read.
+XXVIII. Open issues
+l) Upload Section Two
+m) Set up schedule for next phase
+n) Set up GitHub Repository
+XXIX. New Progress
+k) Section Two uploaded
+l) Schedule under discussion with team to be decided soon.
+m) GitHub Repository set up under DCLSystems
+XXX. Adjournment
+John Byrnes adjourned the meeting at 4:00pm.
+Minutes submitted by:  Dónal McManus	
+Minutes approved by:  Leon Walker O’Brien
+
+
+
+
+
+
+
+
+      Minutes Six
+March 3, 2017
+XXXI. Call to order
+John Byrnes called to order the regular meeting of the 2nd Year Project Group 8 at 3:00pm on March 3, 2017 at Room 233.
+XXXII. Roll call
+Dónal McManus conducted a roll call. The following persons were present: John Byrne, Ciara Walsh and Leon Walker O’Brien.
+XXXIII. Approval of minutes from last meeting
+Dónal read the minutes from the last meeting. The minutes were approved as read.
+XXXIV. Open issues
+o) Obtaining the data required
+p) Complete Static Pages 
+q) Divide workload
+XXXV. New Progress
+n) Meeting set with Carol (Ciara’s Manager)
+o) Schedule made 
+p) Static pages in final stages
+XXXVI. Adjournment
+John Byrnes adjourned the meeting at 3:30pm.
+Minutes submitted by:  Dónal McManus	
+Minutes approved by:  Ciara Walsh
+
+
+
+
+
+
+
+
+Minutes Seven
+March 10, 2017
+XXXVII. Call to order
+John Byrnes called to order the regular meeting of the 2nd Year Project Group 8 at 3:00pm on March 10, 2017 at Room 233.
+XXXVIII. Roll call
+Dónal McManus conducted a roll call. The following persons were present: Ciara Walsh and Leon Walker O’Brien.
+XXXIX. Approval of minutes from last meeting
+Dónal read the minutes from the last meeting. The minutes were approved as read.
+XL. Open issues
+r) Create database
+s) Insert data into database
+t) Insert into Java Play Framework
+XLI. New Progress
+q) Data obtained from Carol	
+r) Excel file created 
+s) Frame work of static pages complete
+XLII. Adjournment
+John Byrnes adjourned the meeting at 4:00pm.
+Minutes submitted by:  Dónal McManus	
+Minutes approved by:  Leon Walker O’Brien
+
+
+
+
+
+
+
+
+Project Schedule
+DCL Systems2nd Year ProjectProject ScheduleDate: 27/02/2017
+Member Name’s:Dónal McManus, Ciara Walsh & Leon Walker O’Brien
+StartEnd TimeTask(s)27/02/2017    -05/03/2017Organize Meetings to obtain data, divide workload06/03/2017    -12/03/2017Obtain data, begin static pages13/03/2017    -19/03/2017Create database, finalize static pages 20/03/2017    -26/03/2017Insert data into database and upload project in JPFW27/03/2017    -02/04/2017Code all methods for Fuel Page03/04/2017    - 09/04/2017Code all methods for Reports Page10/04/2017    -23/04/2017Code all methods for Roster and Reward Members24/04/2017    - 30/04/2017Project Upload – test results and user manual01/05/2017    -07/05/2017Demos – hard copy of all documentation
+Comments: This schedule’s targets are to be a guideline to work off and are flexible to change.
+
+1 | Page
+
+
