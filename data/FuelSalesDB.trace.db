@@ -2041,3 +2041,9 @@ Caused by: java.lang.IllegalStateException: The file is locked: nio:/home/wdd/we
 	at org.h2.mvstore.FileStore.open(FileStore.java:172)
 	at org.h2.mvstore.MVStore.<init>(MVStore.java:344)
 	... 23 more
+2017-04-24 16:04:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'603.77' (ALL_SALES: NET INTEGER)"; SQL statement:
+INSERT INTO ALL_SALES SELECT * FROM CSVREAD('AllSales.txt') -- row #129 ('128', '05.03.2016', '105.9', '86.1', '79.4', '6.7', '8976', '9506', '7728', '603.77', NULL) [22018-192]
+2017-04-24 16:05:16 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'409.13' (ALL_SALES: NET INTEGER)"; SQL statement:
+INSERT INTO ALL_SALES SELECT * FROM CSVREAD('AllSales.txt') -- row #370 ('369', '05.07.2016', '132.9', '108.0', '100.7', '7.4', '5542', '7366', '5989', '409.13', NULL) [22018-192]
