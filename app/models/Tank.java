@@ -52,6 +52,16 @@ public class Tank extends Model
         return Tank.find.all();
     }
 
+    /*public int getTotal(){
+        int sum=0;
+        for(int i=0; i < findAll().size(); i++)
+        {
+
+
+        }
+        return sum;
+    }*/
+
     public int getId() 
     {
         return id;
